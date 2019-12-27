@@ -1,0 +1,297 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vadder
+Z1 !s100 G><Z6j:M7=a=HF?ZT868J0
+Z2 IVeDDgcfP1EM126S=DQbYW0
+Z3 VN0`bcYlPWRSAOJ3f]S0AP1
+Z4 dC:\Users\ss\Desktop\modesim_ESL
+Z5 w1557305581
+Z6 8C:/Users/ss/Desktop/modesim_ESL/Handwrite_Part1.v
+Z7 FC:/Users/ss/Desktop/modesim_ESL/Handwrite_Part1.v
+L0 26
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1557423219.338000
+Z10 !s107 C:/Users/ss/Desktop/modesim_ESL/Handwrite_Part1.v|
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/modesim_ESL/Handwrite_Part1.v|
+Z12 o-work work -O0
+!i10b 1
+!s85 0
+!s101 -O0
+vcase3
+!i10b 1
+!s100 Ni>h?lPaIo@ai;N1Q]79D0
+I9UhYXA=Xl]k[@ZOGI1L@c3
+Z13 Veh1>B2ZK<<aYj`>4Le2T:1
+R4
+Z14 w1557422911
+Z15 8C:/Users/ss/Desktop/modesim_ESL/Part2_DA_BCF2.v
+Z16 FC:/Users/ss/Desktop/modesim_ESL/Part2_DA_BCF2.v
+L0 63
+R8
+r1
+!s85 0
+31
+Z17 !s108 1557423220.525000
+Z18 !s107 C:/Users/ss/Desktop/modesim_ESL/Part2_DA_BCF2.v|
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/modesim_ESL/Part2_DA_BCF2.v|
+!s101 -O0
+R12
+vda
+Z20 !s100 7Q4JVUB`l<2bSEISC`1zb2
+Z21 I<?YN_3gGe`IXh=ECcZoSz1
+Z22 Vb42HiDzIzUnXnm7jNZ<<a0
+R4
+Z23 w1557399477
+Z24 8C:/Users/ss/Desktop/modesim_ESL/Part2_DA_No-LUT.v
+Z25 FC:/Users/ss/Desktop/modesim_ESL/Part2_DA_No-LUT.v
+L0 3
+R8
+r1
+31
+Z26 !s108 1557423220.083000
+Z27 !s107 C:/Users/ss/Desktop/modesim_ESL/Part2_DA_No-LUT.v|
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/modesim_ESL/Part2_DA_No-LUT.v|
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vdafsm
+!i10b 1
+!s100 6S;;F[j25niAI_BE5R8il0
+IgiPnJD<Fd2H4PS^9<JnSH2
+Z29 VefO^bZgmcklP^bYo=VK4z2
+R4
+R14
+R15
+R16
+L0 3
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R12
+vDiscrete_FIR_Filter
+Z30 !s100 McBcoQP8e1ai8?1cXC;_a1
+Z31 IHX84UT;HDMj=G`fQ>YeH]3
+Z32 VKHEK5F6eiWoD=fdajb>oX2
+R4
+Z33 w1557422907
+Z34 8C:/Users/ss/Desktop/modesim_ESL/Part2_DA_Matlab.v
+Z35 FC:/Users/ss/Desktop/modesim_ESL/Part2_DA_Matlab.v
+Z36 L0 234
+R8
+r1
+31
+Z37 !s108 1557423220.265000
+Z38 !s107 C:/Users/ss/Desktop/modesim_ESL/Part2_DA_Matlab.v|
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/modesim_ESL/Part2_DA_Matlab.v|
+R12
+Z40 n@discrete_@f@i@r_@filter
+!i10b 1
+!s85 0
+!s101 -O0
+vf0
+Z41 !s100 DVE@]KoYgl_bA5aPUcRAC2
+Z42 In[U5gzzd:NnD:gcZ@2knZ1
+Z43 V_BM`9cWnZ@[T775VUY;_m2
+R4
+R5
+R6
+R7
+L0 1
+R8
+r1
+31
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vf1
+Z44 !s100 a_WlzBjiE8^W<UnZcS<FH3
+Z45 I]A0]Q3cR466LQi[6<gJ;H2
+Z46 VY0<0gO^KinY8:d[AJJT8b0
+R4
+R5
+R6
+R7
+L0 8
+R8
+r1
+31
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vf2
+Z47 !s100 dhzFLoEf>3dld@NJh0fRB2
+Z48 I4CNUA046G7coZ_DHfj?6i1
+Z49 V^1foaC86ojz6zm89Q4VNE2
+R4
+R5
+R6
+R7
+L0 17
+R8
+r1
+31
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vFIR
+Z50 !s100 ?mR9CV9]]FJYd37^0RWo;1
+Z51 IR2PGcPeHV`9^geS=eF8EP1
+Z52 Vo]fV4EnaD]eoBI<Z_^S`93
+R4
+R5
+R6
+R7
+L0 58
+R8
+r1
+31
+R9
+R10
+R11
+R12
+Z53 n@f@i@r
+!i10b 1
+!s85 0
+!s101 -O0
+vFIR_TB
+Z54 !s100 l5eFPhojfmaV1;[ZYnjFa1
+Z55 IcU[X5;hQU=J>bFmh4POZ11
+Z56 Vz7nVQ5zZW3L=dP6jTIP<?0
+R4
+R5
+R6
+R7
+Z57 L0 126
+R8
+r1
+31
+R9
+R10
+R11
+R12
+Z58 n@f@i@r_@t@b
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX3
+Z59 !s100 [7?FmF`W[k_h4:CSmUQ_K0
+Z60 Iddc;>4fCzdQIb;DBS`Ric3
+Z61 VZk8W@]lc:SI=XiSB0eeQa2
+R4
+R23
+R24
+R25
+L0 63
+R8
+r1
+31
+R26
+R27
+R28
+R12
+Z62 n@m@u@x3
+!i10b 1
+!s85 0
+!s101 -O0
+vreg16
+Z63 !s100 T_cG[gN=[M?`VL]A=7Il82
+Z64 IYGFiWam^845<V4a4CzzCK1
+Z65 VBUfVOQ8<lCQ8W2oREGYCG2
+R4
+R5
+R6
+R7
+L0 36
+R8
+r1
+31
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vSubsystem
+Z66 IH64Xj@F_8zH4D1;jh4f4H2
+Z67 VH3>RzZX[]<<dZES^@G_F@1
+R4
+R33
+R34
+R35
+L0 40
+R8
+r1
+31
+R37
+R38
+R39
+R12
+Z68 n@subsystem
+!i10b 1
+Z69 !s100 [f<=lH;j?VA9SP^XjA1[I0
+!s85 0
+!s101 -O0
+vSubsystem_tb
+Z70 I]V8i]d6Nom<YLTDSYjS:f3
+Z71 V=Ek1:S9RC>4miil>_U_Hf2
+R4
+R33
+R34
+R35
+Z72 L0 568
+R8
+r1
+31
+R37
+R38
+R39
+R12
+Z73 n@subsystem_tb
+!i10b 1
+Z74 !s100 Ji1nRifF6<:08<9ZW5[l^3
+!s85 0
+!s101 -O0
+vSubsystem_tc
+Z75 !s100 kaEQ;;=cBzi;iL1NdbFK]2
+Z76 IbcflD@dlYiIOA?]`bzl4O3
+Z77 VAV@9E:hg3gJ2mcL3KXPYW3
+R4
+R33
+R34
+R35
+R57
+R8
+r1
+31
+R37
+R38
+R39
+R12
+Z78 n@subsystem_tc
+!i10b 1
+!s85 0
+!s101 -O0

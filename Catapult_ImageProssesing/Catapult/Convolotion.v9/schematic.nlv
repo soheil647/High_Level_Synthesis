@@ -1,0 +1,1768 @@
+
+# Program: Catapult System Level Synthesis
+# Version: 2011a.41
+#    File: Nlview netlist
+
+module new "Convolotion:core:fsm" "orig"
+load port clk input -attr xrf 24592 -attr oid 1 -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/clk}
+load port rst input -attr xrf 24593 -attr oid 2 -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/rst}
+load portBus fsm_output(5:0) output 6 fsm_output(5) fsm_output(4) fsm_output(3) fsm_output(2) fsm_output(1) fsm_output(0) -attr xrf 24594 -attr oid 3 -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load port st(for:for:for:for)#1_tr0 input -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/st(for:for:for:for)#1_tr0}
+load port st(for:for:for)_tr0 input -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/st(for:for:for)_tr0}
+load port st(for:for)_tr0 input -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/st(for:for)_tr0}
+load port st(for)_tr0 input -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/st(for)_tr0}
+load net {clk} -attr xrf 24595 -attr oid 4
+load net {clk} -port {clk} -attr xrf 24596 -attr oid 5
+load net {rst} -attr xrf 24597 -attr oid 6
+load net {rst} -port {rst} -attr xrf 24598 -attr oid 7
+load net {fsm_output(0)} -attr vt d
+load net {fsm_output(1)} -attr vt d
+load net {fsm_output(2)} -attr vt d
+load net {fsm_output(3)} -attr vt d
+load net {fsm_output(4)} -attr vt d
+load net {fsm_output(5)} -attr vt d
+load netBundle {fsm_output} 6 {fsm_output(0)} {fsm_output(1)} {fsm_output(2)} {fsm_output(3)} {fsm_output(4)} {fsm_output(5)} -attr xrf 24599 -attr oid 8 -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(0)} -port {fsm_output(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(1)} -port {fsm_output(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(2)} -port {fsm_output(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(3)} -port {fsm_output(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(4)} -port {fsm_output(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {fsm_output(5)} -port {fsm_output(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm/fsm_output}
+load net {st(for:for:for:for)#1_tr0} -attr vt d
+load net {st(for:for:for:for)#1_tr0} -port {st(for:for:for:for)#1_tr0}
+load net {st(for:for:for)_tr0} -attr vt d
+load net {st(for:for:for)_tr0} -port {st(for:for:for)_tr0}
+load net {st(for:for)_tr0} -attr vt d
+load net {st(for:for)_tr0} -port {st(for:for)_tr0}
+load net {st(for)_tr0} -attr vt d
+load net {st(for)_tr0} -port {st(for)_tr0}
+### END MODULE 
+
+module new "Convolotion:core" "orig"
+load port clk input -attr xrf 24600 -attr oid 9 -attr vt d -attr @path {/Convolotion/Convolotion:core/clk}
+load port rst input -attr xrf 24601 -attr oid 10 -attr vt d -attr @path {/Convolotion/Convolotion:core/rst}
+load portBus in:rsc:singleport.addr(17:0) output 18 in:rsc:singleport.addr(17) in:rsc:singleport.addr(16) in:rsc:singleport.addr(15) in:rsc:singleport.addr(14) in:rsc:singleport.addr(13) in:rsc:singleport.addr(12) in:rsc:singleport.addr(11) in:rsc:singleport.addr(10) in:rsc:singleport.addr(9) in:rsc:singleport.addr(8) in:rsc:singleport.addr(7) in:rsc:singleport.addr(6) in:rsc:singleport.addr(5) in:rsc:singleport.addr(4) in:rsc:singleport.addr(3) in:rsc:singleport.addr(2) in:rsc:singleport.addr(1) in:rsc:singleport.addr(0) -attr xrf 24602 -attr oid 11 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load port in:rsc:singleport.re output -attr xrf 24603 -attr oid 12 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.re}
+load portBus in:rsc:singleport.data_out(7:0) input 8 in:rsc:singleport.data_out(7) in:rsc:singleport.data_out(6) in:rsc:singleport.data_out(5) in:rsc:singleport.data_out(4) in:rsc:singleport.data_out(3) in:rsc:singleport.data_out(2) in:rsc:singleport.data_out(1) in:rsc:singleport.data_out(0) -attr xrf 24604 -attr oid 13 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load portBus out:rsc:singleport.data_in(7:0) output 8 out:rsc:singleport.data_in(7) out:rsc:singleport.data_in(6) out:rsc:singleport.data_in(5) out:rsc:singleport.data_in(4) out:rsc:singleport.data_in(3) out:rsc:singleport.data_in(2) out:rsc:singleport.data_in(1) out:rsc:singleport.data_in(0) -attr xrf 24605 -attr oid 14 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load portBus out:rsc:singleport.addr(17:0) output 18 out:rsc:singleport.addr(17) out:rsc:singleport.addr(16) out:rsc:singleport.addr(15) out:rsc:singleport.addr(14) out:rsc:singleport.addr(13) out:rsc:singleport.addr(12) out:rsc:singleport.addr(11) out:rsc:singleport.addr(10) out:rsc:singleport.addr(9) out:rsc:singleport.addr(8) out:rsc:singleport.addr(7) out:rsc:singleport.addr(6) out:rsc:singleport.addr(5) out:rsc:singleport.addr(4) out:rsc:singleport.addr(3) out:rsc:singleport.addr(2) out:rsc:singleport.addr(1) out:rsc:singleport.addr(0) -attr xrf 24606 -attr oid 15 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load port out:rsc:singleport.we output -attr xrf 24607 -attr oid 16 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.we}
+load symbol "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,2)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus a(1:0) input 2 a(1) a(0) \
+     portBus b(1:0) input 2 b(1) b(0) \
+     portBus z(1:0) output 2 z(1) z(0) \
+
+load symbol "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,0,2)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus a(1:0) input 2 a(1) a(0) \
+     portBus b(0:0) input 1 b(0) \
+     portBus z(1:0) output 2 z(1) z(0) \
+
+load symbol "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus a(8:0) input 9 a(8) a(7) a(6) a(5) a(4) a(3) a(2) a(1) a(0) \
+     portBus b(2:0) input 3 b(2) b(1) b(0) \
+     portBus z(10:0) output 11 z(10) z(9) z(8) z(7) z(6) z(5) z(4) z(3) z(2) z(1) z(0) \
+
+load symbol "Convolotion:core:fsm" "orig" GEN \
+     port clk#1 input \
+     port rst#1 input \
+     portBus fsm_output(5:0) output 6 fsm_output(5) fsm_output(4) fsm_output(3) fsm_output(2) fsm_output(1) fsm_output(0) \
+     port st(for:for:for:for)#1_tr0 input \
+     port st(for:for:for)_tr0 input \
+     port st(for:for)_tr0 input \
+     port st(for)_tr0 input \
+
+load symbol "mux(2,2)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(1:0) input 2 A0(1) A0(0) \
+     portBus A1(1:0) input 2 A1(1) A1(0) \
+     portBus S(0:0) input.top 1 S(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "nor(3,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus A2(0:0) input 1 A2(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "and(2,2)" "INTERFACE" AND boxcolor 0 \
+     portBus A0(1:0) input 2 A0(1) A0(0) \
+     portBus A1(1:0) input 2 A1(1) A1(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "reg(2,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus D(1:0) input 2 D(1) D(0) \
+     portBus DRs(1:0) input 2 DRs(1) DRs(0) \
+     port clk input.clk \
+     portBus Rs(0:0) input 1 Rs(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "nor(2,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "and(2,1)" "INTERFACE" AND boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "not(1)" "INTERFACE" INV boxcolor 0 \
+     portBus A(0:0) input 1 A(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "mux(2,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus S(0:0) input.top 1 S(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "reg(1,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus D(0:0) input 1 D(0) \
+     portBus DRs(0:0) input 1 DRs(0) \
+     port clk input.clk \
+     portBus Rs(0:0) input 1 Rs(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "mux(2,6)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(5:0) input 6 A0(5) A0(4) A0(3) A0(2) A0(1) A0(0) \
+     portBus A1(5:0) input 6 A1(5) A1(4) A1(3) A1(2) A1(1) A1(0) \
+     portBus S(0:0) input.top 1 S(0) \
+     portBus Z(5:0) output 6 Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "and(2,6)" "INTERFACE" AND boxcolor 0 \
+     portBus A0(5:0) input 6 A0(5) A0(4) A0(3) A0(2) A0(1) A0(0) \
+     portBus A1(5:0) input 6 A1(5) A1(4) A1(3) A1(2) A1(1) A1(0) \
+     portBus Z(5:0) output 6 Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "reg(6,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus D(5:0) input 6 D(5) D(4) D(3) D(2) D(1) D(0) \
+     portBus DRs(5:0) input 6 DRs(5) DRs(4) DRs(3) DRs(2) DRs(1) DRs(0) \
+     port clk input.clk \
+     portBus Rs(0:0) input 1 Rs(0) \
+     portBus Z(5:0) output 6 Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "mux(2,9)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(8:0) input 9 A0(8) A0(7) A0(6) A0(5) A0(4) A0(3) A0(2) A0(1) A0(0) \
+     portBus A1(8:0) input 9 A1(8) A1(7) A1(6) A1(5) A1(4) A1(3) A1(2) A1(1) A1(0) \
+     portBus S(0:0) input.top 1 S(0) \
+     portBus Z(8:0) output 9 Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "and(2,9)" "INTERFACE" AND boxcolor 0 \
+     portBus A0(8:0) input 9 A0(8) A0(7) A0(6) A0(5) A0(4) A0(3) A0(2) A0(1) A0(0) \
+     portBus A1(8:0) input 9 A1(8) A1(7) A1(6) A1(5) A1(4) A1(3) A1(2) A1(1) A1(0) \
+     portBus Z(8:0) output 9 Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "reg(9,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus D(8:0) input 9 D(8) D(7) D(6) D(5) D(4) D(3) D(2) D(1) D(0) \
+     portBus DRs(8:0) input 9 DRs(8) DRs(7) DRs(6) DRs(5) DRs(4) DRs(3) DRs(2) DRs(1) DRs(0) \
+     port clk input.clk \
+     portBus Rs(0:0) input 1 Rs(0) \
+     portBus Z(8:0) output 9 Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "mux(16,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus A2(0:0) input 1 A2(0) \
+     portBus A3(0:0) input 1 A3(0) \
+     portBus A4(0:0) input 1 A4(0) \
+     portBus A5(0:0) input 1 A5(0) \
+     portBus A6(0:0) input 1 A6(0) \
+     portBus A7(0:0) input 1 A7(0) \
+     portBus A8(0:0) input 1 A8(0) \
+     portBus A9(0:0) input 1 A9(0) \
+     portBus A10(0:0) input 1 A10(0) \
+     portBus A11(0:0) input 1 A11(0) \
+     portBus A12(0:0) input 1 A12(0) \
+     portBus A13(0:0) input 1 A13(0) \
+     portBus A14(0:0) input 1 A14(0) \
+     portBus A15(0:0) input 1 A15(0) \
+     portBus S(3:0) input.top 4 S(3) S(2) S(1) S(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "mux(16,2)" "INTERFACE" MUX boxcolor 0 \
+     portBus A0(1:0) input 2 A0(1) A0(0) \
+     portBus A1(1:0) input 2 A1(1) A1(0) \
+     portBus A2(1:0) input 2 A2(1) A2(0) \
+     portBus A3(1:0) input 2 A3(1) A3(0) \
+     portBus A4(1:0) input 2 A4(1) A4(0) \
+     portBus A5(1:0) input 2 A5(1) A5(0) \
+     portBus A6(1:0) input 2 A6(1) A6(0) \
+     portBus A7(1:0) input 2 A7(1) A7(0) \
+     portBus A8(1:0) input 2 A8(1) A8(0) \
+     portBus A9(1:0) input 2 A9(1) A9(0) \
+     portBus A10(1:0) input 2 A10(1) A10(0) \
+     portBus A11(1:0) input 2 A11(1) A11(0) \
+     portBus A12(1:0) input 2 A12(1) A12(0) \
+     portBus A13(1:0) input 2 A13(1) A13(0) \
+     portBus A14(1:0) input 2 A14(1) A14(0) \
+     portBus A15(1:0) input 2 A15(1) A15(0) \
+     portBus S(3:0) input.top 4 S(3) S(2) S(1) S(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "or(4,1)" "INTERFACE" OR boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus A2(0:0) input 1 A2(0) \
+     portBus A3(0:0) input 1 A3(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "add(2,0,2,0,3)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus A(1:0) input 2 A(1) A(0) \
+     portBus B(1:0) input 2 B(1) B(0) \
+     portBus Z(2:0) output 3 Z(2) Z(1) Z(0) \
+
+load symbol "not(2)" "INTERFACE" INV boxcolor 0 \
+     portBus A(1:0) input 2 A(1) A(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "add(2,-1,1,0,2)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus A(1:0) input 2 A(1) A(0) \
+     portBus B(0:0) input 1 B(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load symbol "or(2,8)" "INTERFACE" OR boxcolor 0 \
+     portBus A0(7:0) input 8 A0(7) A0(6) A0(5) A0(4) A0(3) A0(2) A0(1) A0(0) \
+     portBus A1(7:0) input 8 A1(7) A1(6) A1(5) A1(4) A1(3) A1(2) A1(1) A1(0) \
+     portBus Z(7:0) output 8 Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "mul(8,0,5,0,12)" "INTERFACE" RTL(*) boxcolor 0 \
+     portBus A(7:0) input 8 A(7) A(6) A(5) A(4) A(3) A(2) A(1) A(0) \
+     portBus B(4:0) input 5 B(4) B(3) B(2) B(1) B(0) \
+     portBus Z(11:0) output 12 Z(11) Z(10) Z(9) Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "add(8,0,5,0,9)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus A(7:0) input 8 A(7) A(6) A(5) A(4) A(3) A(2) A(1) A(0) \
+     portBus B(4:0) input 5 B(4) B(3) B(2) B(1) B(0) \
+     portBus Z(8:0) output 9 Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "or(2,1)" "INTERFACE" OR boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "or(3,1)" "INTERFACE" OR boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus A2(0:0) input 1 A2(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "add(9,-1,2,1,9)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus A(8:0) input 9 A(8) A(7) A(6) A(5) A(4) A(3) A(2) A(1) A(0) \
+     portBus B(1:0) input 2 B(1) B(0) \
+     portBus Z(8:0) output 9 Z(8) Z(7) Z(6) Z(5) Z(4) Z(3) Z(2) Z(1) Z(0) \
+
+load symbol "nand(3,1)" "INTERFACE" NAND boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus A2(0:0) input 1 A2(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "nand(2,1)" "INTERFACE" NAND boxcolor 0 \
+     portBus A0(0:0) input 1 A0(0) \
+     portBus A1(0:0) input 1 A1(0) \
+     portBus Z(0:0) output 1 Z(0) \
+
+load symbol "add(2,-1,1,1,2)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus A(1:0) input 2 A(1) A(0) \
+     portBus B(0:0) input 1 B(0) \
+     portBus Z(1:0) output 2 Z(1) Z(0) \
+
+load net {Kcolumn#1.sva(0)} -attr vt d
+load net {Kcolumn#1.sva(1)} -attr vt d
+load netBundle {Kcolumn#1.sva} 2 {Kcolumn#1.sva(0)} {Kcolumn#1.sva(1)} -attr xrf 24608 -attr oid 17 -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Result.sg1.lpi#4.reg(0)} -attr vt d
+load net {Result.sg1.lpi#4.reg(1)} -attr vt d
+load net {Result.sg1.lpi#4.reg(2)} -attr vt d
+load net {Result.sg1.lpi#4.reg(3)} -attr vt d
+load net {Result.sg1.lpi#4.reg(4)} -attr vt d
+load net {Result.sg1.lpi#4.reg(5)} -attr vt d
+load netBundle {Result.sg1.lpi#4.reg} 6 {Result.sg1.lpi#4.reg(0)} {Result.sg1.lpi#4.reg(1)} {Result.sg1.lpi#4.reg(2)} {Result.sg1.lpi#4.reg(3)} {Result.sg1.lpi#4.reg(4)} {Result.sg1.lpi#4.reg(5)} -attr xrf 24609 -attr oid 18 -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Krow#1.sva(0)} -attr vt d
+load net {Krow#1.sva(1)} -attr vt d
+load netBundle {Krow#1.sva} 2 {Krow#1.sva(0)} {Krow#1.sva(1)} -attr xrf 24610 -attr oid 19 -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {for:for:for:for:else:mux.itm(0)} -attr vt d
+load net {for:for:for:for:else:mux.itm(1)} -attr vt d
+load netBundle {for:for:for:for:else:mux.itm} 2 {for:for:for:for:else:mux.itm(0)} {for:for:for:for:else:mux.itm(1)} -attr xrf 24611 -attr oid 20 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm}
+load net {Dcolumn#1.sva#2(0)} -attr vt d
+load net {Dcolumn#1.sva#2(1)} -attr vt d
+load net {Dcolumn#1.sva#2(2)} -attr vt d
+load net {Dcolumn#1.sva#2(3)} -attr vt d
+load net {Dcolumn#1.sva#2(4)} -attr vt d
+load net {Dcolumn#1.sva#2(5)} -attr vt d
+load net {Dcolumn#1.sva#2(6)} -attr vt d
+load net {Dcolumn#1.sva#2(7)} -attr vt d
+load net {Dcolumn#1.sva#2(8)} -attr vt d
+load netBundle {Dcolumn#1.sva#2} 9 {Dcolumn#1.sva#2(0)} {Dcolumn#1.sva#2(1)} {Dcolumn#1.sva#2(2)} {Dcolumn#1.sva#2(3)} {Dcolumn#1.sva#2(4)} {Dcolumn#1.sva#2(5)} {Dcolumn#1.sva#2(6)} {Dcolumn#1.sva#2(7)} {Dcolumn#1.sva#2(8)} -attr xrf 24612 -attr oid 21 -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Drow#1.sva#2(0)} -attr vt d
+load net {Drow#1.sva#2(1)} -attr vt d
+load net {Drow#1.sva#2(2)} -attr vt d
+load net {Drow#1.sva#2(3)} -attr vt d
+load net {Drow#1.sva#2(4)} -attr vt d
+load net {Drow#1.sva#2(5)} -attr vt d
+load net {Drow#1.sva#2(6)} -attr vt d
+load net {Drow#1.sva#2(7)} -attr vt d
+load net {Drow#1.sva#2(8)} -attr vt d
+load netBundle {Drow#1.sva#2} 9 {Drow#1.sva#2(0)} {Drow#1.sva#2(1)} {Drow#1.sva#2(2)} {Drow#1.sva#2(3)} {Drow#1.sva#2(4)} {Drow#1.sva#2(5)} {Drow#1.sva#2(6)} {Drow#1.sva#2(7)} {Drow#1.sva#2(8)} -attr xrf 24613 -attr oid 22 -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {z.out(0)} -attr vt d
+load net {z.out(1)} -attr vt d
+load netBundle {z.out} 2 {z.out(0)} {z.out(1)} -attr xrf 24614 -attr oid 23 -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {z.out#2(0)} -attr vt d
+load net {z.out#2(1)} -attr vt d
+load net {z.out#2(2)} -attr vt d
+load net {z.out#2(3)} -attr vt d
+load net {z.out#2(4)} -attr vt d
+load net {z.out#2(5)} -attr vt d
+load net {z.out#2(6)} -attr vt d
+load net {z.out#2(7)} -attr vt d
+load net {z.out#2(8)} -attr vt d
+load net {z.out#2(9)} -attr vt d
+load net {z.out#2(10)} -attr vt d
+load netBundle {z.out#2} 11 {z.out#2(0)} {z.out#2(1)} {z.out#2(2)} {z.out#2(3)} {z.out#2(4)} {z.out#2(5)} {z.out#2(6)} {z.out#2(7)} {z.out#2(8)} {z.out#2(9)} {z.out#2(10)} -attr xrf 24615 -attr oid 24 -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#3(0)} -attr vt d
+load net {z.out#3(1)} -attr vt d
+load net {z.out#3(2)} -attr vt d
+load net {z.out#3(3)} -attr vt d
+load net {z.out#3(4)} -attr vt d
+load net {z.out#3(5)} -attr vt d
+load net {z.out#3(6)} -attr vt d
+load net {z.out#3(7)} -attr vt d
+load net {z.out#3(8)} -attr vt d
+load net {z.out#3(9)} -attr vt d
+load net {z.out#3(10)} -attr vt d
+load netBundle {z.out#3} 11 {z.out#3(0)} {z.out#3(1)} {z.out#3(2)} {z.out#3(3)} {z.out#3(4)} {z.out#3(5)} {z.out#3(6)} {z.out#3(7)} {z.out#3(8)} {z.out#3(9)} {z.out#3(10)} -attr xrf 24616 -attr oid 25 -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {for:for:for:for:else:acc#6.sdt(0)} -attr vt d
+load net {for:for:for:for:else:acc#6.sdt(1)} -attr vt d
+load net {for:for:for:for:else:acc#6.sdt(2)} -attr vt d
+load netBundle {for:for:for:for:else:acc#6.sdt} 3 {for:for:for:for:else:acc#6.sdt(0)} {for:for:for:for:else:acc#6.sdt(1)} {for:for:for:for:else:acc#6.sdt(2)} -attr xrf 24617 -attr oid 26 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#6.sdt}
+load net {for:for:for:for:else:conc#7(0)} -attr vt d
+load net {for:for:for:for:else:conc#7(1)} -attr vt d
+load net {for:for:for:for:else:conc#7(2)} -attr vt d
+load net {for:for:for:for:else:conc#7(3)} -attr vt d
+load netBundle {for:for:for:for:else:conc#7} 4 {for:for:for:for:else:conc#7(0)} {for:for:for:for:else:conc#7(1)} {for:for:for:for:else:conc#7(2)} {for:for:for:for:else:conc#7(3)} -attr xrf 24618 -attr oid 27 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(0)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(1)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(2)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(3)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(4)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(5)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(6)} -attr vt d
+load net {for:for:for:for:else:ac_fixed:cctor.sva(7)} -attr vt d
+load netBundle {for:for:for:for:else:ac_fixed:cctor.sva} 8 {for:for:for:for:else:ac_fixed:cctor.sva(0)} {for:for:for:for:else:ac_fixed:cctor.sva(1)} {for:for:for:for:else:ac_fixed:cctor.sva(2)} {for:for:for:for:else:ac_fixed:cctor.sva(3)} {for:for:for:for:else:ac_fixed:cctor.sva(4)} {for:for:for:for:else:ac_fixed:cctor.sva(5)} {for:for:for:for:else:ac_fixed:cctor.sva(6)} {for:for:for:for:else:ac_fixed:cctor.sva(7)} -attr xrf 24619 -attr oid 28 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {slc.sat.sva(0)} -attr vt d
+load net {slc.sat.sva(1)} -attr vt d
+load net {slc.sat.sva(2)} -attr vt d
+load net {slc.sat.sva(3)} -attr vt d
+load net {slc.sat.sva(4)} -attr vt d
+load net {slc.sat.sva(5)} -attr vt d
+load net {slc.sat.sva(6)} -attr vt d
+load net {slc.sat.sva(7)} -attr vt d
+load net {slc.sat.sva(8)} -attr vt d
+load netBundle {slc.sat.sva} 9 {slc.sat.sva(0)} {slc.sat.sva(1)} {slc.sat.sva(2)} {slc.sat.sva(3)} {slc.sat.sva(4)} {slc.sat.sva(5)} {slc.sat.sva(6)} {slc.sat.sva(7)} {slc.sat.sva(8)} -attr xrf 24620 -attr oid 29 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {and#25.itm(0)} -attr vt d
+load net {and#25.itm(1)} -attr vt d
+load netBundle {and#25.itm} 2 {and#25.itm(0)} {and#25.itm(1)} -attr xrf 24621 -attr oid 30 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25.itm}
+load net {mux#11.itm(0)} -attr vt d
+load net {mux#11.itm(1)} -attr vt d
+load netBundle {mux#11.itm} 2 {mux#11.itm(0)} {mux#11.itm(1)} -attr xrf 24622 -attr oid 31 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11.itm}
+load net {exs#5.itm(0)} -attr vt d
+load net {exs#5.itm(1)} -attr vt d
+load netBundle {exs#5.itm} 2 {exs#5.itm(0)} {exs#5.itm(1)} -attr xrf 24623 -attr oid 32 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm}
+load net {and#26.itm(0)} -attr vt d
+load net {and#26.itm(1)} -attr vt d
+load netBundle {and#26.itm} 2 {and#26.itm(0)} {and#26.itm(1)} -attr xrf 24624 -attr oid 33 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26.itm}
+load net {mux#12.itm(0)} -attr vt d
+load net {mux#12.itm(1)} -attr vt d
+load netBundle {mux#12.itm} 2 {mux#12.itm(0)} {mux#12.itm(1)} -attr xrf 24625 -attr oid 34 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12.itm}
+load net {exs#6.itm(0)} -attr vt d
+load net {exs#6.itm(1)} -attr vt d
+load netBundle {exs#6.itm} 2 {exs#6.itm(0)} {exs#6.itm(1)} -attr xrf 24626 -attr oid 35 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#6.itm}
+load net {and#28.itm(0)} -attr vt d
+load net {and#28.itm(1)} -attr vt d
+load net {and#28.itm(2)} -attr vt d
+load net {and#28.itm(3)} -attr vt d
+load net {and#28.itm(4)} -attr vt d
+load net {and#28.itm(5)} -attr vt d
+load netBundle {and#28.itm} 6 {and#28.itm(0)} {and#28.itm(1)} {and#28.itm(2)} {and#28.itm(3)} {and#28.itm(4)} {and#28.itm(5)} -attr xrf 24627 -attr oid 36 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {mux#14.itm(0)} -attr vt d
+load net {mux#14.itm(1)} -attr vt d
+load net {mux#14.itm(2)} -attr vt d
+load net {mux#14.itm(3)} -attr vt d
+load net {mux#14.itm(4)} -attr vt d
+load net {mux#14.itm(5)} -attr vt d
+load netBundle {mux#14.itm} 6 {mux#14.itm(0)} {mux#14.itm(1)} {mux#14.itm(2)} {mux#14.itm(3)} {mux#14.itm(4)} {mux#14.itm(5)} -attr xrf 24628 -attr oid 37 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(0)} -attr vt d
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(1)} -attr vt d
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(2)} -attr vt d
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(3)} -attr vt d
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(4)} -attr vt d
+load net {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(5)} -attr vt d
+load netBundle {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm} 6 {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(0)} {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(1)} {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(2)} {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(3)} {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(4)} {slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm(5)} -attr xrf 24629 -attr oid 38 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {exs#7.itm(0)} -attr vt d
+load net {exs#7.itm(1)} -attr vt d
+load net {exs#7.itm(2)} -attr vt d
+load net {exs#7.itm(3)} -attr vt d
+load net {exs#7.itm(4)} -attr vt d
+load net {exs#7.itm(5)} -attr vt d
+load netBundle {exs#7.itm} 6 {exs#7.itm(0)} {exs#7.itm(1)} {exs#7.itm(2)} {exs#7.itm(3)} {exs#7.itm(4)} {exs#7.itm(5)} -attr xrf 24630 -attr oid 39 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {and.itm(0)} -attr vt d
+load net {and.itm(1)} -attr vt d
+load net {and.itm(2)} -attr vt d
+load net {and.itm(3)} -attr vt d
+load net {and.itm(4)} -attr vt d
+load net {and.itm(5)} -attr vt d
+load net {and.itm(6)} -attr vt d
+load net {and.itm(7)} -attr vt d
+load net {and.itm(8)} -attr vt d
+load netBundle {and.itm} 9 {and.itm(0)} {and.itm(1)} {and.itm(2)} {and.itm(3)} {and.itm(4)} {and.itm(5)} {and.itm(6)} {and.itm(7)} {and.itm(8)} -attr xrf 24631 -attr oid 40 -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {mux.itm(0)} -attr vt d
+load net {mux.itm(1)} -attr vt d
+load net {mux.itm(2)} -attr vt d
+load net {mux.itm(3)} -attr vt d
+load net {mux.itm(4)} -attr vt d
+load net {mux.itm(5)} -attr vt d
+load net {mux.itm(6)} -attr vt d
+load net {mux.itm(7)} -attr vt d
+load net {mux.itm(8)} -attr vt d
+load netBundle {mux.itm} 9 {mux.itm(0)} {mux.itm(1)} {mux.itm(2)} {mux.itm(3)} {mux.itm(4)} {mux.itm(5)} {mux.itm(6)} {mux.itm(7)} {mux.itm(8)} -attr xrf 24632 -attr oid 41 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {slc(for:acc#1.tmp.pdr).itm(0)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(1)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(2)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(3)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(4)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(5)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(6)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(7)} -attr vt d
+load net {slc(for:acc#1.tmp.pdr).itm(8)} -attr vt d
+load netBundle {slc(for:acc#1.tmp.pdr).itm} 9 {slc(for:acc#1.tmp.pdr).itm(0)} {slc(for:acc#1.tmp.pdr).itm(1)} {slc(for:acc#1.tmp.pdr).itm(2)} {slc(for:acc#1.tmp.pdr).itm(3)} {slc(for:acc#1.tmp.pdr).itm(4)} {slc(for:acc#1.tmp.pdr).itm(5)} {slc(for:acc#1.tmp.pdr).itm(6)} {slc(for:acc#1.tmp.pdr).itm(7)} {slc(for:acc#1.tmp.pdr).itm(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {exs.itm(0)} -attr vt d
+load net {exs.itm(1)} -attr vt d
+load net {exs.itm(2)} -attr vt d
+load net {exs.itm(3)} -attr vt d
+load net {exs.itm(4)} -attr vt d
+load net {exs.itm(5)} -attr vt d
+load net {exs.itm(6)} -attr vt d
+load net {exs.itm(7)} -attr vt d
+load net {exs.itm(8)} -attr vt d
+load netBundle {exs.itm} 9 {exs.itm(0)} {exs.itm(1)} {exs.itm(2)} {exs.itm(3)} {exs.itm(4)} {exs.itm(5)} {exs.itm(6)} {exs.itm(7)} {exs.itm(8)} -attr xrf 24633 -attr oid 42 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {and#30.itm(0)} -attr vt d
+load net {and#30.itm(1)} -attr vt d
+load net {and#30.itm(2)} -attr vt d
+load net {and#30.itm(3)} -attr vt d
+load net {and#30.itm(4)} -attr vt d
+load net {and#30.itm(5)} -attr vt d
+load net {and#30.itm(6)} -attr vt d
+load net {and#30.itm(7)} -attr vt d
+load net {and#30.itm(8)} -attr vt d
+load netBundle {and#30.itm} 9 {and#30.itm(0)} {and#30.itm(1)} {and#30.itm(2)} {and#30.itm(3)} {and#30.itm(4)} {and#30.itm(5)} {and#30.itm(6)} {and#30.itm(7)} {and#30.itm(8)} -attr xrf 24634 -attr oid 43 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {mux#16.itm(0)} -attr vt d
+load net {mux#16.itm(1)} -attr vt d
+load net {mux#16.itm(2)} -attr vt d
+load net {mux#16.itm(3)} -attr vt d
+load net {mux#16.itm(4)} -attr vt d
+load net {mux#16.itm(5)} -attr vt d
+load net {mux#16.itm(6)} -attr vt d
+load net {mux#16.itm(7)} -attr vt d
+load net {mux#16.itm(8)} -attr vt d
+load netBundle {mux#16.itm} 9 {mux#16.itm(0)} {mux#16.itm(1)} {mux#16.itm(2)} {mux#16.itm(3)} {mux#16.itm(4)} {mux#16.itm(5)} {mux#16.itm(6)} {mux#16.itm(7)} {mux#16.itm(8)} -attr xrf 24635 -attr oid 44 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {slc(for:for:acc#3.tmp.pdr).itm(0)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(1)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(2)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(3)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(4)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(5)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(6)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(7)} -attr vt d
+load net {slc(for:for:acc#3.tmp.pdr).itm(8)} -attr vt d
+load netBundle {slc(for:for:acc#3.tmp.pdr).itm} 9 {slc(for:for:acc#3.tmp.pdr).itm(0)} {slc(for:for:acc#3.tmp.pdr).itm(1)} {slc(for:for:acc#3.tmp.pdr).itm(2)} {slc(for:for:acc#3.tmp.pdr).itm(3)} {slc(for:for:acc#3.tmp.pdr).itm(4)} {slc(for:for:acc#3.tmp.pdr).itm(5)} {slc(for:for:acc#3.tmp.pdr).itm(6)} {slc(for:for:acc#3.tmp.pdr).itm(7)} {slc(for:for:acc#3.tmp.pdr).itm(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {exs#8.itm(0)} -attr vt d
+load net {exs#8.itm(1)} -attr vt d
+load net {exs#8.itm(2)} -attr vt d
+load net {exs#8.itm(3)} -attr vt d
+load net {exs#8.itm(4)} -attr vt d
+load net {exs#8.itm(5)} -attr vt d
+load net {exs#8.itm(6)} -attr vt d
+load net {exs#8.itm(7)} -attr vt d
+load net {exs#8.itm(8)} -attr vt d
+load netBundle {exs#8.itm} 9 {exs#8.itm(0)} {exs#8.itm(1)} {exs#8.itm(2)} {exs#8.itm(3)} {exs#8.itm(4)} {exs#8.itm(5)} {exs#8.itm(6)} {exs#8.itm(7)} {exs#8.itm(8)} -attr xrf 24636 -attr oid 45 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {for:for:for:for:else:mux.itm#2(0)} -attr vt d
+load net {for:for:for:for:else:mux.itm#2(1)} -attr vt d
+load netBundle {for:for:for:for:else:mux.itm#2} 2 {for:for:for:for:else:mux.itm#2(0)} {for:for:for:for:else:mux.itm#2(1)} -attr xrf 24637 -attr oid 46 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm#2}
+load net {asn(for:for:for:for:else:asn#8).itm(0)} -attr vt d
+load net {asn(for:for:for:for:else:asn#8).itm(1)} -attr vt d
+load netBundle {asn(for:for:for:for:else:asn#8).itm} 2 {asn(for:for:for:for:else:asn#8).itm(0)} {asn(for:for:for:for:else:asn#8).itm(1)} -attr xrf 24638 -attr oid 47 -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#8).itm}
+load net {for:for:for:for:else:asn#1.itm(0)} -attr vt d
+load net {for:for:for:for:else:asn#1.itm(1)} -attr vt d
+load netBundle {for:for:for:for:else:asn#1.itm} 2 {for:for:for:for:else:asn#1.itm(0)} {for:for:for:for:else:asn#1.itm(1)} -attr xrf 24639 -attr oid 48 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:asn#1.itm}
+load net {for:for:for:for:oelse#2:not.itm(0)} -attr vt d
+load net {for:for:for:for:oelse#2:not.itm(1)} -attr vt d
+load netBundle {for:for:for:for:oelse#2:not.itm} 2 {for:for:for:for:oelse#2:not.itm(0)} {for:for:for:for:oelse#2:not.itm(1)} -attr xrf 24640 -attr oid 49 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not.itm}
+load net {slc(conv2.sva)#1.itm(0)} -attr vt d
+load net {slc(conv2.sva)#1.itm(1)} -attr vt d
+load netBundle {slc(conv2.sva)#1.itm} 2 {slc(conv2.sva)#1.itm(0)} {slc(conv2.sva)#1.itm(1)} -attr xrf 24641 -attr oid 50 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva)#1.itm}
+load net {for:for:for:for:else:acc#7.itm(0)} -attr vt d
+load net {for:for:for:for:else:acc#7.itm(1)} -attr vt d
+load net {for:for:for:for:else:acc#7.itm(2)} -attr vt d
+load netBundle {for:for:for:for:else:acc#7.itm} 3 {for:for:for:for:else:acc#7.itm(0)} {for:for:for:for:else:acc#7.itm(1)} {for:for:for:for:else:acc#7.itm(2)} -attr xrf 24642 -attr oid 51 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#7.itm}
+load net {slc(for:for:for:for:else:acc#6.sdt)#1.itm(0)} -attr vt d
+load net {slc(for:for:for:for:else:acc#6.sdt)#1.itm(1)} -attr vt d
+load netBundle {slc(for:for:for:for:else:acc#6.sdt)#1.itm} 2 {slc(for:for:for:for:else:acc#6.sdt)#1.itm(0)} {slc(for:for:for:for:else:acc#6.sdt)#1.itm(1)} -attr xrf 24643 -attr oid 52 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:acc#6.sdt)#1.itm}
+load net {asn(for:for:for:for:else:asn#7).itm(0)} -attr vt d
+load net {asn(for:for:for:for:else:asn#7).itm(1)} -attr vt d
+load netBundle {asn(for:for:for:for:else:asn#7).itm} 2 {asn(for:for:for:for:else:asn#7).itm(0)} {asn(for:for:for:for:else:asn#7).itm(1)} -attr xrf 24644 -attr oid 53 -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#7).itm}
+load net {slc(slc.sat.sva).itm(0)} -attr vt d
+load net {slc(slc.sat.sva).itm(1)} -attr vt d
+load net {slc(slc.sat.sva).itm(2)} -attr vt d
+load net {slc(slc.sat.sva).itm(3)} -attr vt d
+load net {slc(slc.sat.sva).itm(4)} -attr vt d
+load net {slc(slc.sat.sva).itm(5)} -attr vt d
+load net {slc(slc.sat.sva).itm(6)} -attr vt d
+load net {slc(slc.sat.sva).itm(7)} -attr vt d
+load netBundle {slc(slc.sat.sva).itm} 8 {slc(slc.sat.sva).itm(0)} {slc(slc.sat.sva).itm(1)} {slc(slc.sat.sva).itm(2)} {slc(slc.sat.sva).itm(3)} {slc(slc.sat.sva).itm(4)} {slc(slc.sat.sva).itm(5)} {slc(slc.sat.sva).itm(6)} {slc(slc.sat.sva).itm(7)} -attr xrf 24645 -attr oid 54 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {for:for:for:for:else:exs.itm(0)} -attr vt d
+load net {for:for:for:for:else:exs.itm(1)} -attr vt d
+load net {for:for:for:for:else:exs.itm(2)} -attr vt d
+load net {for:for:for:for:else:exs.itm(3)} -attr vt d
+load net {for:for:for:for:else:exs.itm(4)} -attr vt d
+load net {for:for:for:for:else:exs.itm(5)} -attr vt d
+load net {for:for:for:for:else:exs.itm(6)} -attr vt d
+load net {for:for:for:for:else:exs.itm(7)} -attr vt d
+load netBundle {for:for:for:for:else:exs.itm} 8 {for:for:for:for:else:exs.itm(0)} {for:for:for:for:else:exs.itm(1)} {for:for:for:for:else:exs.itm(2)} {for:for:for:for:else:exs.itm(3)} {for:for:for:for:else:exs.itm(4)} {for:for:for:for:else:exs.itm(5)} {for:for:for:for:else:exs.itm(6)} {for:for:for:for:else:exs.itm(7)} -attr xrf 24646 -attr oid 55 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {for:for:for:for:else:conc#4.itm(0)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(1)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(2)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(3)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(4)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(5)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(6)} -attr vt d
+load net {for:for:for:for:else:conc#4.itm(7)} -attr vt d
+load netBundle {for:for:for:for:else:conc#4.itm} 8 {for:for:for:for:else:conc#4.itm(0)} {for:for:for:for:else:conc#4.itm(1)} {for:for:for:for:else:conc#4.itm(2)} {for:for:for:for:else:conc#4.itm(3)} {for:for:for:for:else:conc#4.itm(4)} {for:for:for:for:else:conc#4.itm(5)} {for:for:for:for:else:conc#4.itm(6)} {for:for:for:for:else:conc#4.itm(7)} -attr xrf 24647 -attr oid 56 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(0)} -attr vt d
+load net {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(1)} -attr vt d
+load net {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(2)} -attr vt d
+load net {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(3)} -attr vt d
+load net {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(4)} -attr vt d
+load netBundle {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm} 5 {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(0)} {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(1)} {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(2)} {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(3)} {for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm(4)} -attr xrf 24648 -attr oid 57 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {for:for:for:for:else:mul#1.itm(0)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(1)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(2)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(3)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(4)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(5)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(6)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(7)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(8)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(9)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(10)} -attr vt d
+load net {for:for:for:for:else:mul#1.itm(11)} -attr vt d
+load netBundle {for:for:for:for:else:mul#1.itm} 12 {for:for:for:for:else:mul#1.itm(0)} {for:for:for:for:else:mul#1.itm(1)} {for:for:for:for:else:mul#1.itm(2)} {for:for:for:for:else:mul#1.itm(3)} {for:for:for:for:else:mul#1.itm(4)} {for:for:for:for:else:mul#1.itm(5)} {for:for:for:for:else:mul#1.itm(6)} {for:for:for:for:else:mul#1.itm(7)} {for:for:for:for:else:mul#1.itm(8)} {for:for:for:for:else:mul#1.itm(9)} {for:for:for:for:else:mul#1.itm(10)} {for:for:for:for:else:mul#1.itm(11)} -attr xrf 24649 -attr oid 58 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {conc.itm(0)} -attr vt d
+load net {conc.itm(1)} -attr vt d
+load net {conc.itm(2)} -attr vt d
+load net {conc.itm(3)} -attr vt d
+load net {conc.itm(4)} -attr vt d
+load netBundle {conc.itm} 5 {conc.itm(0)} {conc.itm(1)} {conc.itm(2)} {conc.itm(3)} {conc.itm(4)} -attr xrf 24650 -attr oid 59 -attr vt d -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {for:for:for:for:else:exs#2.itm(0)} -attr vt d
+load net {for:for:for:for:else:exs#2.itm(1)} -attr vt d
+load netBundle {for:for:for:for:else:exs#2.itm} 2 {for:for:for:for:else:exs#2.itm(0)} {for:for:for:for:else:exs#2.itm(1)} -attr xrf 24651 -attr oid 60 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs#2.itm}
+load net {for:for:for:for:else:acc.itm(0)} -attr vt d
+load net {for:for:for:for:else:acc.itm(1)} -attr vt d
+load net {for:for:for:for:else:acc.itm(2)} -attr vt d
+load net {for:for:for:for:else:acc.itm(3)} -attr vt d
+load net {for:for:for:for:else:acc.itm(4)} -attr vt d
+load net {for:for:for:for:else:acc.itm(5)} -attr vt d
+load net {for:for:for:for:else:acc.itm(6)} -attr vt d
+load net {for:for:for:for:else:acc.itm(7)} -attr vt d
+load net {for:for:for:for:else:acc.itm(8)} -attr vt d
+load netBundle {for:for:for:for:else:acc.itm} 9 {for:for:for:for:else:acc.itm(0)} {for:for:for:for:else:acc.itm(1)} {for:for:for:for:else:acc.itm(2)} {for:for:for:for:else:acc.itm(3)} {for:for:for:for:else:acc.itm(4)} {for:for:for:for:else:acc.itm(5)} {for:for:for:for:else:acc.itm(6)} {for:for:for:for:else:acc.itm(7)} {for:for:for:for:else:acc.itm(8)} -attr xrf 24652 -attr oid 61 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {slc(conv2.sva).itm(0)} -attr vt d
+load net {slc(conv2.sva).itm(1)} -attr vt d
+load net {slc(conv2.sva).itm(2)} -attr vt d
+load net {slc(conv2.sva).itm(3)} -attr vt d
+load net {slc(conv2.sva).itm(4)} -attr vt d
+load net {slc(conv2.sva).itm(5)} -attr vt d
+load net {slc(conv2.sva).itm(6)} -attr vt d
+load net {slc(conv2.sva).itm(7)} -attr vt d
+load net {slc(conv2.sva).itm(8)} -attr vt d
+load netBundle {slc(conv2.sva).itm} 9 {slc(conv2.sva).itm(0)} {slc(conv2.sva).itm(1)} {slc(conv2.sva).itm(2)} {slc(conv2.sva).itm(3)} {slc(conv2.sva).itm(4)} {slc(conv2.sva).itm(5)} {slc(conv2.sva).itm(6)} {slc(conv2.sva).itm(7)} {slc(conv2.sva).itm(8)} -attr xrf 24653 -attr oid 62 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {slc(conv1.sva).itm(0)} -attr vt d
+load net {slc(conv1.sva).itm(1)} -attr vt d
+load netBundle {slc(conv1.sva).itm} 2 {slc(conv1.sva).itm(0)} {slc(conv1.sva).itm(1)} -attr xrf 24654 -attr oid 63 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva).itm}
+load net {slc(conv1.sva)#1.itm(0)} -attr vt d
+load net {slc(conv1.sva)#1.itm(1)} -attr vt d
+load net {slc(conv1.sva)#1.itm(2)} -attr vt d
+load net {slc(conv1.sva)#1.itm(3)} -attr vt d
+load net {slc(conv1.sva)#1.itm(4)} -attr vt d
+load net {slc(conv1.sva)#1.itm(5)} -attr vt d
+load net {slc(conv1.sva)#1.itm(6)} -attr vt d
+load net {slc(conv1.sva)#1.itm(7)} -attr vt d
+load net {slc(conv1.sva)#1.itm(8)} -attr vt d
+load netBundle {slc(conv1.sva)#1.itm} 9 {slc(conv1.sva)#1.itm(0)} {slc(conv1.sva)#1.itm(1)} {slc(conv1.sva)#1.itm(2)} {slc(conv1.sva)#1.itm(3)} {slc(conv1.sva)#1.itm(4)} {slc(conv1.sva)#1.itm(5)} {slc(conv1.sva)#1.itm(6)} {slc(conv1.sva)#1.itm(7)} {slc(conv1.sva)#1.itm(8)} -attr xrf 24655 -attr oid 64 -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva)#1.itm}
+load net {mux#10.itm(0)} -attr vt d
+load net {mux#10.itm(1)} -attr vt d
+load netBundle {mux#10.itm} 2 {mux#10.itm(0)} {mux#10.itm(1)} -attr xrf 24656 -attr oid 65 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10.itm}
+load net {asn.itm(0)} -attr vt d
+load net {asn.itm(1)} -attr vt d
+load net {asn.itm(2)} -attr vt d
+load net {asn.itm(3)} -attr vt d
+load net {asn.itm(4)} -attr vt d
+load net {asn.itm(5)} -attr vt d
+load net {asn.itm(6)} -attr vt d
+load net {asn.itm(7)} -attr vt d
+load net {asn.itm(8)} -attr vt d
+load netBundle {asn.itm} 9 {asn.itm(0)} {asn.itm(1)} {asn.itm(2)} {asn.itm(3)} {asn.itm(4)} {asn.itm(5)} {asn.itm(6)} {asn.itm(7)} {asn.itm(8)} -attr xrf 24657 -attr oid 66 -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {exs.itm#1(0)} -attr vt d
+load net {exs.itm#1(1)} -attr vt d
+load net {exs.itm#1(2)} -attr vt d
+load netBundle {exs.itm#1} 3 {exs.itm#1(0)} {exs.itm#1(1)} {exs.itm#1(2)} -attr xrf 24658 -attr oid 67 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm#1}
+load net {mux#7.itm(0)} -attr vt d
+load net {mux#7.itm(1)} -attr vt d
+load netBundle {mux#7.itm} 2 {mux#7.itm(0)} {mux#7.itm(1)} -attr xrf 24659 -attr oid 68 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#7.itm}
+load net {for:for:for:for:acc#8.itm(0)} -attr vt d
+load net {for:for:for:for:acc#8.itm(1)} -attr vt d
+load netBundle {for:for:for:for:acc#8.itm} 2 {for:for:for:for:acc#8.itm(0)} {for:for:for:for:acc#8.itm(1)} -attr xrf 24660 -attr oid 69 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8.itm}
+load net {asn#1.itm(0)} -attr vt d
+load net {asn#1.itm(1)} -attr vt d
+load net {asn#1.itm(2)} -attr vt d
+load net {asn#1.itm(3)} -attr vt d
+load net {asn#1.itm(4)} -attr vt d
+load net {asn#1.itm(5)} -attr vt d
+load net {asn#1.itm(6)} -attr vt d
+load net {asn#1.itm(7)} -attr vt d
+load net {asn#1.itm(8)} -attr vt d
+load netBundle {asn#1.itm} 9 {asn#1.itm(0)} {asn#1.itm(1)} {asn#1.itm(2)} {asn#1.itm(3)} {asn#1.itm(4)} {asn#1.itm(5)} {asn#1.itm(6)} {asn#1.itm(7)} {asn#1.itm(8)} -attr xrf 24661 -attr oid 70 -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {exs#5.itm#1(0)} -attr vt d
+load net {exs#5.itm#1(1)} -attr vt d
+load net {exs#5.itm#1(2)} -attr vt d
+load netBundle {exs#5.itm#1} 3 {exs#5.itm#1(0)} {exs#5.itm#1(1)} {exs#5.itm#1(2)} -attr xrf 24662 -attr oid 71 -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm#1}
+load net {mux#9.itm(0)} -attr vt d
+load net {mux#9.itm(1)} -attr vt d
+load netBundle {mux#9.itm} 2 {mux#9.itm(0)} {mux#9.itm(1)} -attr xrf 24663 -attr oid 72 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#9.itm}
+load net {for:for:for:for:acc#7.itm(0)} -attr vt d
+load net {for:for:for:for:acc#7.itm(1)} -attr vt d
+load netBundle {for:for:for:for:acc#7.itm} 2 {for:for:for:for:acc#7.itm(0)} {for:for:for:for:acc#7.itm(1)} -attr xrf 24664 -attr oid 73 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7.itm}
+load net {clk} -attr xrf 24665 -attr oid 74
+load net {clk} -port {clk} -attr xrf 24666 -attr oid 75
+load net {rst} -attr xrf 24667 -attr oid 76
+load net {rst} -port {rst} -attr xrf 24668 -attr oid 77
+load net {in:rsc:singleport.addr(0)} -attr vt d
+load net {in:rsc:singleport.addr(1)} -attr vt d
+load net {in:rsc:singleport.addr(2)} -attr vt d
+load net {in:rsc:singleport.addr(3)} -attr vt d
+load net {in:rsc:singleport.addr(4)} -attr vt d
+load net {in:rsc:singleport.addr(5)} -attr vt d
+load net {in:rsc:singleport.addr(6)} -attr vt d
+load net {in:rsc:singleport.addr(7)} -attr vt d
+load net {in:rsc:singleport.addr(8)} -attr vt d
+load net {in:rsc:singleport.addr(9)} -attr vt d
+load net {in:rsc:singleport.addr(10)} -attr vt d
+load net {in:rsc:singleport.addr(11)} -attr vt d
+load net {in:rsc:singleport.addr(12)} -attr vt d
+load net {in:rsc:singleport.addr(13)} -attr vt d
+load net {in:rsc:singleport.addr(14)} -attr vt d
+load net {in:rsc:singleport.addr(15)} -attr vt d
+load net {in:rsc:singleport.addr(16)} -attr vt d
+load net {in:rsc:singleport.addr(17)} -attr vt d
+load netBundle {in:rsc:singleport.addr} 18 {in:rsc:singleport.addr(0)} {in:rsc:singleport.addr(1)} {in:rsc:singleport.addr(2)} {in:rsc:singleport.addr(3)} {in:rsc:singleport.addr(4)} {in:rsc:singleport.addr(5)} {in:rsc:singleport.addr(6)} {in:rsc:singleport.addr(7)} {in:rsc:singleport.addr(8)} {in:rsc:singleport.addr(9)} {in:rsc:singleport.addr(10)} {in:rsc:singleport.addr(11)} {in:rsc:singleport.addr(12)} {in:rsc:singleport.addr(13)} {in:rsc:singleport.addr(14)} {in:rsc:singleport.addr(15)} {in:rsc:singleport.addr(16)} {in:rsc:singleport.addr(17)} -attr xrf 24669 -attr oid 78 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(0)} -port {in:rsc:singleport.addr(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(1)} -port {in:rsc:singleport.addr(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(2)} -port {in:rsc:singleport.addr(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(3)} -port {in:rsc:singleport.addr(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(4)} -port {in:rsc:singleport.addr(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(5)} -port {in:rsc:singleport.addr(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(6)} -port {in:rsc:singleport.addr(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(7)} -port {in:rsc:singleport.addr(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {z.out#3(8)} -port {in:rsc:singleport.addr(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(0)} -port {in:rsc:singleport.addr(9)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(1)} -port {in:rsc:singleport.addr(10)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(2)} -port {in:rsc:singleport.addr(11)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(3)} -port {in:rsc:singleport.addr(12)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(4)} -port {in:rsc:singleport.addr(13)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(5)} -port {in:rsc:singleport.addr(14)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(6)} -port {in:rsc:singleport.addr(15)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(7)} -port {in:rsc:singleport.addr(16)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {for:for:for:for:else:acc.itm(8)} -port {in:rsc:singleport.addr(17)} -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.addr}
+load net {in:rsc:singleport.re} -attr xrf 24670 -attr oid 79 -attr vt d
+load net {in:rsc:singleport.re} -port {in:rsc:singleport.re} -attr xrf 24671 -attr oid 80 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.re}
+load net {in:rsc:singleport.data_out(0)} -attr vt d
+load net {in:rsc:singleport.data_out(1)} -attr vt d
+load net {in:rsc:singleport.data_out(2)} -attr vt d
+load net {in:rsc:singleport.data_out(3)} -attr vt d
+load net {in:rsc:singleport.data_out(4)} -attr vt d
+load net {in:rsc:singleport.data_out(5)} -attr vt d
+load net {in:rsc:singleport.data_out(6)} -attr vt d
+load net {in:rsc:singleport.data_out(7)} -attr vt d
+load netBundle {in:rsc:singleport.data_out} 8 {in:rsc:singleport.data_out(0)} {in:rsc:singleport.data_out(1)} {in:rsc:singleport.data_out(2)} {in:rsc:singleport.data_out(3)} {in:rsc:singleport.data_out(4)} {in:rsc:singleport.data_out(5)} {in:rsc:singleport.data_out(6)} {in:rsc:singleport.data_out(7)} -attr xrf 24672 -attr oid 81 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(0)} -port {in:rsc:singleport.data_out(0)} -attr vt d
+load net {in:rsc:singleport.data_out(1)} -port {in:rsc:singleport.data_out(1)} -attr vt d
+load net {in:rsc:singleport.data_out(2)} -port {in:rsc:singleport.data_out(2)} -attr vt d
+load net {in:rsc:singleport.data_out(3)} -port {in:rsc:singleport.data_out(3)} -attr vt d
+load net {in:rsc:singleport.data_out(4)} -port {in:rsc:singleport.data_out(4)} -attr vt d
+load net {in:rsc:singleport.data_out(5)} -port {in:rsc:singleport.data_out(5)} -attr vt d
+load net {in:rsc:singleport.data_out(6)} -port {in:rsc:singleport.data_out(6)} -attr vt d
+load net {in:rsc:singleport.data_out(7)} -port {in:rsc:singleport.data_out(7)} -attr vt d
+load netBundle in:rsc:singleport.data_out 8 in:rsc:singleport.data_out(0) in:rsc:singleport.data_out(1) in:rsc:singleport.data_out(2) in:rsc:singleport.data_out(3) in:rsc:singleport.data_out(4) in:rsc:singleport.data_out(5) in:rsc:singleport.data_out(6) in:rsc:singleport.data_out(7) -attr xrf 24673 -attr oid 82 -attr vt d -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {out:rsc:singleport.data_in(0)} -attr vt d
+load net {out:rsc:singleport.data_in(1)} -attr vt d
+load net {out:rsc:singleport.data_in(2)} -attr vt d
+load net {out:rsc:singleport.data_in(3)} -attr vt d
+load net {out:rsc:singleport.data_in(4)} -attr vt d
+load net {out:rsc:singleport.data_in(5)} -attr vt d
+load net {out:rsc:singleport.data_in(6)} -attr vt d
+load net {out:rsc:singleport.data_in(7)} -attr vt d
+load netBundle {out:rsc:singleport.data_in} 8 {out:rsc:singleport.data_in(0)} {out:rsc:singleport.data_in(1)} {out:rsc:singleport.data_in(2)} {out:rsc:singleport.data_in(3)} {out:rsc:singleport.data_in(4)} {out:rsc:singleport.data_in(5)} {out:rsc:singleport.data_in(6)} {out:rsc:singleport.data_in(7)} -attr xrf 24674 -attr oid 83 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result#1.lpi#4.reg} -port {out:rsc:singleport.data_in(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(0)} -port {out:rsc:singleport.data_in(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(1)} -port {out:rsc:singleport.data_in(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(2)} -port {out:rsc:singleport.data_in(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(3)} -port {out:rsc:singleport.data_in(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(4)} -port {out:rsc:singleport.data_in(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg1.lpi#4.reg(5)} -port {out:rsc:singleport.data_in(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {Result.sg2.lpi#4.reg} -port {out:rsc:singleport.data_in(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.addr(0)} -attr vt d
+load net {out:rsc:singleport.addr(1)} -attr vt d
+load net {out:rsc:singleport.addr(2)} -attr vt d
+load net {out:rsc:singleport.addr(3)} -attr vt d
+load net {out:rsc:singleport.addr(4)} -attr vt d
+load net {out:rsc:singleport.addr(5)} -attr vt d
+load net {out:rsc:singleport.addr(6)} -attr vt d
+load net {out:rsc:singleport.addr(7)} -attr vt d
+load net {out:rsc:singleport.addr(8)} -attr vt d
+load net {out:rsc:singleport.addr(9)} -attr vt d
+load net {out:rsc:singleport.addr(10)} -attr vt d
+load net {out:rsc:singleport.addr(11)} -attr vt d
+load net {out:rsc:singleport.addr(12)} -attr vt d
+load net {out:rsc:singleport.addr(13)} -attr vt d
+load net {out:rsc:singleport.addr(14)} -attr vt d
+load net {out:rsc:singleport.addr(15)} -attr vt d
+load net {out:rsc:singleport.addr(16)} -attr vt d
+load net {out:rsc:singleport.addr(17)} -attr vt d
+load netBundle {out:rsc:singleport.addr} 18 {out:rsc:singleport.addr(0)} {out:rsc:singleport.addr(1)} {out:rsc:singleport.addr(2)} {out:rsc:singleport.addr(3)} {out:rsc:singleport.addr(4)} {out:rsc:singleport.addr(5)} {out:rsc:singleport.addr(6)} {out:rsc:singleport.addr(7)} {out:rsc:singleport.addr(8)} {out:rsc:singleport.addr(9)} {out:rsc:singleport.addr(10)} {out:rsc:singleport.addr(11)} {out:rsc:singleport.addr(12)} {out:rsc:singleport.addr(13)} {out:rsc:singleport.addr(14)} {out:rsc:singleport.addr(15)} {out:rsc:singleport.addr(16)} {out:rsc:singleport.addr(17)} -attr xrf 24675 -attr oid 84 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(0)} -port {out:rsc:singleport.addr(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(1)} -port {out:rsc:singleport.addr(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(2)} -port {out:rsc:singleport.addr(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(3)} -port {out:rsc:singleport.addr(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(4)} -port {out:rsc:singleport.addr(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(5)} -port {out:rsc:singleport.addr(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(6)} -port {out:rsc:singleport.addr(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(7)} -port {out:rsc:singleport.addr(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Dcolumn#1.sva#2(8)} -port {out:rsc:singleport.addr(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(0)} -port {out:rsc:singleport.addr(9)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(1)} -port {out:rsc:singleport.addr(10)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(2)} -port {out:rsc:singleport.addr(11)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(3)} -port {out:rsc:singleport.addr(12)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(4)} -port {out:rsc:singleport.addr(13)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(5)} -port {out:rsc:singleport.addr(14)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(6)} -port {out:rsc:singleport.addr(15)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(7)} -port {out:rsc:singleport.addr(16)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {Drow#1.sva#2(8)} -port {out:rsc:singleport.addr(17)} -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.addr}
+load net {out:rsc:singleport.we} -attr xrf 24676 -attr oid 85 -attr vt d
+load net {out:rsc:singleport.we} -port {out:rsc:singleport.we} -attr xrf 24677 -attr oid 86 -attr vt d -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.we}
+load inst "Convolotion:core:fsm:inst" "Convolotion:core:fsm" "orig" -attr xrf 24678 -attr oid 87 -attr @path {/Convolotion/Convolotion:core/Convolotion:core:fsm:inst} -attr area 1.000000 -attr hier "/Convolotion/Convolotion:core/Convolotion:core:fsm" -pg 1 -lvl 3
+load net {clk} -pin  "Convolotion:core:fsm:inst" {clk#1} -attr xrf 24679 -attr oid 88 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "Convolotion:core:fsm:inst" {rst#1} -attr xrf 24680 -attr oid 89 -attr @path {/Convolotion/Convolotion:core/rst}
+load net {fsm_output#1(0)} -pin  "Convolotion:core:fsm:inst" {fsm_output(0)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {fsm_output#1(1)} -pin  "Convolotion:core:fsm:inst" {fsm_output(1)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {fsm_output#1(2)} -pin  "Convolotion:core:fsm:inst" {fsm_output(2)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {fsm_output#1(3)} -pin  "Convolotion:core:fsm:inst" {fsm_output(3)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {fsm_output#1(4)} -pin  "Convolotion:core:fsm:inst" {fsm_output(4)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {fsm_output#1(5)} -pin  "Convolotion:core:fsm:inst" {fsm_output(5)} -attr @path {/Convolotion/Convolotion:core/fsm_output}
+load net {exit:for:for:for:for} -pin  "Convolotion:core:fsm:inst" {st(for:for:for:for)#1_tr0} -attr xrf 24681 -attr oid 90 -attr @path {/Convolotion/Convolotion:core/exit:for:for:for:for}
+load net {not#8.itm} -pin  "Convolotion:core:fsm:inst" {st(for:for:for)_tr0} -attr @path {/Convolotion/Convolotion:core/not#8.itm}
+load net {z.out#2(9)} -pin  "Convolotion:core:fsm:inst" {st(for:for)_tr0} -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr)#1.itm}
+load net {z.out#3(9)} -pin  "Convolotion:core:fsm:inst" {st(for)_tr0} -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr)#1.itm}
+load inst "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,2)" "INTERFACE" -attr xrf 24682 -attr oid 91 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,2)} -attr area 3.352794 -attr delay 0.971483 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,2)"
+load net {mux#10.itm(0)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {a(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10.itm}
+load net {mux#10.itm(1)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {a(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10.itm}
+load net {PWR} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {b(0)} -attr @path {/Convolotion/Convolotion:core/C1_2}
+load net {GND} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {b(1)} -attr @path {/Convolotion/Convolotion:core/C1_2}
+load net {z.out(0)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {z.out(1)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_2_0_2)" {z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load inst "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,0,2)" "INTERFACE" -attr xrf 24683 -attr oid 92 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,0,2)} -attr area 3.356884 -attr delay 1.025696 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,0,2)" -pg 1 -lvl 1
+load net {z.out(0)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" {a(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {z.out(1)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" {a(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {PWR} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" {b(0)} -attr @path {/Convolotion/Convolotion:core/C1_1}
+load net {z.out#1(0)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" {z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#1}
+load net {z.out#1(1)} -pin  "for:for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2_0_1_0_2)" {z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#1}
+load inst "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)" "INTERFACE" -attr xrf 24684 -attr oid 93 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)} -attr area 10.000000 -attr delay 1.105152 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)"
+load net {Drow#1.sva#2(0)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(1)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(2)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(3)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(4)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(5)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(6)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(7)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {Drow#1.sva#2(8)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn.itm}
+load net {mux#7.itm(0)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm#1}
+load net {mux#7.itm(1)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm#1}
+load net {mux#7.itm(1)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm#1}
+load net {z.out#2(0)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(1)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(2)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(3)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(4)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(5)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(6)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(7)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(8)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(9)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(9)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load net {z.out#2(10)} -pin  "for:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(10)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#2}
+load inst "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)" "INTERFACE" -attr xrf 24685 -attr oid 94 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)} -attr area 10.000000 -attr delay 1.105152 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)"
+load net {Dcolumn#1.sva#2(0)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(1)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(2)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(3)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(4)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(5)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(6)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(7)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {Dcolumn#1.sva#2(8)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {a(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn#1.itm}
+load net {mux#9.itm(0)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm#1}
+load net {mux#9.itm(1)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm#1}
+load net {mux#9.itm(1)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {b(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm#1}
+load net {z.out#3(0)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(1)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(2)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(3)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(4)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(5)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(6)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(7)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(8)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(9)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(9)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load net {z.out#3(10)} -pin  "for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9_0_3_1_11)" {z(10)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out#3}
+load inst "mux#11" "mux(2,2)" "INTERFACE" -attr xrf 24686 -attr oid 95 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11} -attr area 1.839846 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,1,2)"
+load net {Krow#1.sva(0)} -pin  "mux#11" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {Krow#1.sva(1)} -pin  "mux#11" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {z.out(0)} -pin  "mux#11" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {z.out(1)} -pin  "mux#11" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {fsm_output#1(2)} -pin  "mux#11" {S(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#2.itm}
+load net {mux#11.itm(0)} -pin  "mux#11" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11.itm}
+load net {mux#11.itm(1)} -pin  "mux#11" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11.itm}
+load inst "nor" "nor(3,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nor} -attr area 1.055476 -attr delay 0.648066 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nor(1,3)"
+load net {or.dcpl#19} -pin  "nor" {A0(0)} -attr @path {/Convolotion/Convolotion:core/or.dcpl#19}
+load net {fsm_output#1(4)} -pin  "nor" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#21.itm}
+load net {fsm_output#1(3)} -pin  "nor" {A2(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#17.itm}
+load net {nor.itm} -pin  "nor" {Z(0)} -attr @path {/Convolotion/Convolotion:core/nor.itm}
+load inst "and#25" "and(2,2)" "INTERFACE" -attr xrf 24687 -attr oid 96 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25} -attr area 1.460665 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(2,2)"
+load net {mux#11.itm(0)} -pin  "and#25" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11.itm}
+load net {mux#11.itm(1)} -pin  "and#25" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#11.itm}
+load net {nor.itm} -pin  "and#25" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm}
+load net {nor.itm} -pin  "and#25" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#5.itm}
+load net {and#25.itm(0)} -pin  "and#25" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25.itm}
+load net {and#25.itm(1)} -pin  "and#25" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25.itm}
+load inst "reg(Krow#1.sva)" "reg(2,1,0,0,1)" "INTERFACE" -attr xrf 24688 -attr oid 97 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(Krow#1.sva)}
+load net {and#25.itm(0)} -pin  "reg(Krow#1.sva)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25.itm}
+load net {and#25.itm(1)} -pin  "reg(Krow#1.sva)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#25.itm}
+load net {GND} -pin  "reg(Krow#1.sva)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {GND} -pin  "reg(Krow#1.sva)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {clk} -pin  "reg(Krow#1.sva)" {clk} -attr xrf 24689 -attr oid 98 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Krow#1.sva)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Krow#1.sva(0)} -pin  "reg(Krow#1.sva)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {Krow#1.sva(1)} -pin  "reg(Krow#1.sva)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load inst "nor#3" "nor(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nor#3} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nor(1,2)"
+load net {fsm_output#1(4)} -pin  "nor#3" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#30.itm}
+load net {fsm_output#1(3)} -pin  "nor#3" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#18.itm}
+load net {nor#3.itm} -pin  "nor#3" {Z(0)} -attr @path {/Convolotion/Convolotion:core/nor#3.itm}
+load inst "and#8" "and(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/and#8} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(1,2)"
+load net {and.dcpl#7} -pin  "and#8" {A0(0)} -attr @path {/Convolotion/Convolotion:core/and.dcpl#7}
+load net {nor#3.itm} -pin  "and#8" {A1(0)} -attr @path {/Convolotion/Convolotion:core/nor#3.itm}
+load net {and#8.itm} -pin  "and#8" {Z(0)} -attr @path {/Convolotion/Convolotion:core/and#8.itm}
+load inst "mux#12" "mux(2,2)" "INTERFACE" -attr xrf 24690 -attr oid 99 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12} -attr area 1.839846 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,1,2)"
+load net {Kcolumn#1.sva(0)} -pin  "mux#12" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Kcolumn#1.sva(1)} -pin  "mux#12" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {z.out(0)} -pin  "mux#12" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {z.out(1)} -pin  "mux#12" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/z.out}
+load net {and#8.itm} -pin  "mux#12" {S(0)} -attr @path {/Convolotion/Convolotion:core/and#8.itm}
+load net {mux#12.itm(0)} -pin  "mux#12" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12.itm}
+load net {mux#12.itm(1)} -pin  "mux#12" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12.itm}
+load inst "not#29" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#29} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {or#22.cse} -pin  "not#29" {A(0)} -attr @path {/Convolotion/Convolotion:core/or#22.cse}
+load net {not#29.itm} -pin  "not#29" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#29.itm}
+load inst "and#26" "and(2,2)" "INTERFACE" -attr xrf 24691 -attr oid 100 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26} -attr area 1.460665 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(2,2)"
+load net {mux#12.itm(0)} -pin  "and#26" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12.itm}
+load net {mux#12.itm(1)} -pin  "and#26" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#12.itm}
+load net {not#29.itm} -pin  "and#26" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#6.itm}
+load net {not#29.itm} -pin  "and#26" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#6.itm}
+load net {and#26.itm(0)} -pin  "and#26" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26.itm}
+load net {and#26.itm(1)} -pin  "and#26" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26.itm}
+load inst "reg(Kcolumn#1.sva)" "reg(2,1,0,0,1)" "INTERFACE" -attr xrf 24692 -attr oid 101 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(Kcolumn#1.sva)}
+load net {and#26.itm(0)} -pin  "reg(Kcolumn#1.sva)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26.itm}
+load net {and#26.itm(1)} -pin  "reg(Kcolumn#1.sva)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#26.itm}
+load net {GND} -pin  "reg(Kcolumn#1.sva)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {GND} -pin  "reg(Kcolumn#1.sva)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {clk} -pin  "reg(Kcolumn#1.sva)" {clk} -attr xrf 24693 -attr oid 102 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Kcolumn#1.sva)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Kcolumn#1.sva(0)} -pin  "reg(Kcolumn#1.sva)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Kcolumn#1.sva(1)} -pin  "reg(Kcolumn#1.sva)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load inst "mux#13" "mux(2,1)" "INTERFACE" -attr xrf 24694 -attr oid 103 -attr @path {/Convolotion/Convolotion:core/mux#13} -attr area 0.920423 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(1,1,2)"
+load net {Result#1.lpi#4.reg} -pin  "mux#13" {A0(0)} -attr @path {/Convolotion/Convolotion:core/Result#1.lpi#4.reg}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(0)} -pin  "mux#13" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva).itm}
+load net {or#24.cse} -pin  "mux#13" {S(0)} -attr @path {/Convolotion/Convolotion:core/or#24.cse}
+load net {mux#13.itm} -pin  "mux#13" {Z(0)} -attr @path {/Convolotion/Convolotion:core/mux#13.itm}
+load inst "not#30" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#30} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {or#22.cse} -pin  "not#30" {A(0)} -attr @path {/Convolotion/Convolotion:core/or#22.cse}
+load net {not#30.itm} -pin  "not#30" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#30.itm}
+load inst "and#27" "and(2,1)" "INTERFACE" -attr xrf 24695 -attr oid 104 -attr @path {/Convolotion/Convolotion:core/and#27} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(1,2)"
+load net {mux#13.itm} -pin  "and#27" {A0(0)} -attr @path {/Convolotion/Convolotion:core/mux#13.itm}
+load net {not#30.itm} -pin  "and#27" {A1(0)} -attr @path {/Convolotion/Convolotion:core/not#30.itm}
+load net {and#27.itm} -pin  "and#27" {Z(0)} -attr @path {/Convolotion/Convolotion:core/and#27.itm}
+load inst "reg(Result#1.lpi#4.reg)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 24696 -attr oid 105 -attr @path {/Convolotion/Convolotion:core/reg(Result#1.lpi#4.reg)}
+load net {and#27.itm} -pin  "reg(Result#1.lpi#4.reg)" {D(0)} -attr @path {/Convolotion/Convolotion:core/and#27.itm}
+load net {GND} -pin  "reg(Result#1.lpi#4.reg)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_1}
+load net {clk} -pin  "reg(Result#1.lpi#4.reg)" {clk} -attr xrf 24697 -attr oid 106 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Result#1.lpi#4.reg)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Result#1.lpi#4.reg} -pin  "reg(Result#1.lpi#4.reg)" {Z(0)} -attr @path {/Convolotion/Convolotion:core/Result#1.lpi#4.reg}
+load inst "mux#14" "mux(2,6)" "INTERFACE" -attr xrf 24698 -attr oid 107 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14} -attr area 5.517538 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(6,1,2)"
+load net {Result.sg1.lpi#4.reg(0)} -pin  "mux#14" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(1)} -pin  "mux#14" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(2)} -pin  "mux#14" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(3)} -pin  "mux#14" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(4)} -pin  "mux#14" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(5)} -pin  "mux#14" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(1)} -pin  "mux#14" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(2)} -pin  "mux#14" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(3)} -pin  "mux#14" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(4)} -pin  "mux#14" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(5)} -pin  "mux#14" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(6)} -pin  "mux#14" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#1.itm}
+load net {or#24.cse} -pin  "mux#14" {S(0)} -attr @path {/Convolotion/Convolotion:core/or#24.cse}
+load net {mux#14.itm(0)} -pin  "mux#14" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(1)} -pin  "mux#14" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(2)} -pin  "mux#14" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(3)} -pin  "mux#14" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(4)} -pin  "mux#14" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(5)} -pin  "mux#14" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load inst "not#31" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#31} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {or#22.cse} -pin  "not#31" {A(0)} -attr @path {/Convolotion/Convolotion:core/or#22.cse}
+load net {not#31.itm} -pin  "not#31" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#31.itm}
+load inst "and#28" "and(2,6)" "INTERFACE" -attr xrf 24699 -attr oid 108 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28} -attr area 4.379994 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(6,2)"
+load net {mux#14.itm(0)} -pin  "and#28" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(1)} -pin  "and#28" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(2)} -pin  "and#28" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(3)} -pin  "and#28" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(4)} -pin  "and#28" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {mux#14.itm(5)} -pin  "and#28" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#14.itm}
+load net {not#31.itm} -pin  "and#28" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {not#31.itm} -pin  "and#28" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {not#31.itm} -pin  "and#28" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {not#31.itm} -pin  "and#28" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {not#31.itm} -pin  "and#28" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {not#31.itm} -pin  "and#28" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#7.itm}
+load net {and#28.itm(0)} -pin  "and#28" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(1)} -pin  "and#28" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(2)} -pin  "and#28" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(3)} -pin  "and#28" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(4)} -pin  "and#28" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(5)} -pin  "and#28" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load inst "reg(Result.sg1.lpi#4.reg)" "reg(6,1,0,0,1)" "INTERFACE" -attr xrf 24700 -attr oid 109 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(Result.sg1.lpi#4.reg)}
+load net {and#28.itm(0)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(1)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(2)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(3)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(4)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {and#28.itm(5)} -pin  "reg(Result.sg1.lpi#4.reg)" {D(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#28.itm}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(2)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(3)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(4)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {GND} -pin  "reg(Result.sg1.lpi#4.reg)" {DRs(5)} -attr @path {/Convolotion/Convolotion:core/C0_6}
+load net {clk} -pin  "reg(Result.sg1.lpi#4.reg)" {clk} -attr xrf 24701 -attr oid 110 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Result.sg1.lpi#4.reg)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Result.sg1.lpi#4.reg(0)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(1)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(2)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(3)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(4)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load net {Result.sg1.lpi#4.reg(5)} -pin  "reg(Result.sg1.lpi#4.reg)" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Result.sg1.lpi#4.reg}
+load inst "mux#15" "mux(2,1)" "INTERFACE" -attr xrf 24702 -attr oid 111 -attr vt c -attr @path {/Convolotion/Convolotion:core/mux#15} -attr area 0.920423 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(1,1,2)"
+load net {Result.sg2.lpi#4.reg} -pin  "mux#15" {A0(0)} -attr @path {/Convolotion/Convolotion:core/Result.sg2.lpi#4.reg}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(7)} -pin  "mux#15" {A1(0)} -attr vt c -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:ac_fixed:cctor.sva)#2.itm}
+load net {or#24.cse} -pin  "mux#15" {S(0)} -attr @path {/Convolotion/Convolotion:core/or#24.cse}
+load net {mux#15.itm} -pin  "mux#15" {Z(0)} -attr vt c -attr @path {/Convolotion/Convolotion:core/mux#15.itm}
+load inst "not#32" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#32} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {or#22.cse} -pin  "not#32" {A(0)} -attr @path {/Convolotion/Convolotion:core/or#22.cse}
+load net {not#32.itm} -pin  "not#32" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#32.itm}
+load inst "and#29" "and(2,1)" "INTERFACE" -attr xrf 24703 -attr oid 112 -attr vt c -attr @path {/Convolotion/Convolotion:core/and#29} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(1,2)"
+load net {mux#15.itm} -pin  "and#29" {A0(0)} -attr vt c -attr @path {/Convolotion/Convolotion:core/mux#15.itm}
+load net {not#32.itm} -pin  "and#29" {A1(0)} -attr @path {/Convolotion/Convolotion:core/not#32.itm}
+load net {and#29.itm} -pin  "and#29" {Z(0)} -attr vt c -attr @path {/Convolotion/Convolotion:core/and#29.itm}
+load inst "reg(Result.sg2.lpi#4.reg)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 24704 -attr oid 113 -attr vt c -attr @path {/Convolotion/Convolotion:core/reg(Result.sg2.lpi#4.reg)}
+load net {and#29.itm} -pin  "reg(Result.sg2.lpi#4.reg)" {D(0)} -attr vt c -attr @path {/Convolotion/Convolotion:core/and#29.itm}
+load net {GND} -pin  "reg(Result.sg2.lpi#4.reg)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_1}
+load net {clk} -pin  "reg(Result.sg2.lpi#4.reg)" {clk} -attr xrf 24705 -attr oid 114 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Result.sg2.lpi#4.reg)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Result.sg2.lpi#4.reg} -pin  "reg(Result.sg2.lpi#4.reg)" {Z(0)} -attr @path {/Convolotion/Convolotion:core/Result.sg2.lpi#4.reg}
+load inst "mux" "mux(2,9)" "INTERFACE" -attr xrf 24706 -attr oid 115 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux} -attr area 8.275807 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(9,1,2)"
+load net {Dcolumn#1.sva#2(0)} -pin  "mux" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(1)} -pin  "mux" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(2)} -pin  "mux" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(3)} -pin  "mux" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(4)} -pin  "mux" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(5)} -pin  "mux" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(6)} -pin  "mux" {A0(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(7)} -pin  "mux" {A0(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(8)} -pin  "mux" {A0(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {z.out#3(0)} -pin  "mux" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(1)} -pin  "mux" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(2)} -pin  "mux" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(3)} -pin  "mux" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(4)} -pin  "mux" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(5)} -pin  "mux" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(6)} -pin  "mux" {A1(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(7)} -pin  "mux" {A1(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {z.out#3(8)} -pin  "mux" {A1(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:acc#1.tmp.pdr).itm}
+load net {and.dcpl#7} -pin  "mux" {S(0)} -attr @path {/Convolotion/Convolotion:core/and.dcpl#7}
+load net {mux.itm(0)} -pin  "mux" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(1)} -pin  "mux" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(2)} -pin  "mux" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(3)} -pin  "mux" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(4)} -pin  "mux" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(5)} -pin  "mux" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(6)} -pin  "mux" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(7)} -pin  "mux" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(8)} -pin  "mux" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load inst "not" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {fsm_output#1(0)} -pin  "not" {A(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output).itm}
+load net {not.itm} -pin  "not" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not.itm}
+load inst "and" "and(2,9)" "INTERFACE" -attr xrf 24707 -attr oid 116 -attr vt d -attr @path {/Convolotion/Convolotion:core/and} -attr area 6.569492 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(9,2)"
+load net {mux.itm(0)} -pin  "and" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(1)} -pin  "and" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(2)} -pin  "and" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(3)} -pin  "and" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(4)} -pin  "and" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(5)} -pin  "and" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(6)} -pin  "and" {A0(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(7)} -pin  "and" {A0(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {mux.itm(8)} -pin  "and" {A0(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux.itm}
+load net {not.itm} -pin  "and" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {not.itm} -pin  "and" {A1(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs.itm}
+load net {and.itm(0)} -pin  "and" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(1)} -pin  "and" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(2)} -pin  "and" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(3)} -pin  "and" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(4)} -pin  "and" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(5)} -pin  "and" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(6)} -pin  "and" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(7)} -pin  "and" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(8)} -pin  "and" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load inst "reg(Dcolumn#1.sva#2)" "reg(9,1,0,0,1)" "INTERFACE" -attr xrf 24708 -attr oid 117 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(Dcolumn#1.sva#2)}
+load net {and.itm(0)} -pin  "reg(Dcolumn#1.sva#2)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(1)} -pin  "reg(Dcolumn#1.sva#2)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(2)} -pin  "reg(Dcolumn#1.sva#2)" {D(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(3)} -pin  "reg(Dcolumn#1.sva#2)" {D(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(4)} -pin  "reg(Dcolumn#1.sva#2)" {D(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(5)} -pin  "reg(Dcolumn#1.sva#2)" {D(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(6)} -pin  "reg(Dcolumn#1.sva#2)" {D(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(7)} -pin  "reg(Dcolumn#1.sva#2)" {D(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {and.itm(8)} -pin  "reg(Dcolumn#1.sva#2)" {D(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and.itm}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(2)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(3)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(4)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(5)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(6)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(7)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Dcolumn#1.sva#2)" {DRs(8)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {clk} -pin  "reg(Dcolumn#1.sva#2)" {clk} -attr xrf 24709 -attr oid 118 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Dcolumn#1.sva#2)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Dcolumn#1.sva#2(0)} -pin  "reg(Dcolumn#1.sva#2)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(1)} -pin  "reg(Dcolumn#1.sva#2)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(2)} -pin  "reg(Dcolumn#1.sva#2)" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(3)} -pin  "reg(Dcolumn#1.sva#2)" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(4)} -pin  "reg(Dcolumn#1.sva#2)" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(5)} -pin  "reg(Dcolumn#1.sva#2)" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(6)} -pin  "reg(Dcolumn#1.sva#2)" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(7)} -pin  "reg(Dcolumn#1.sva#2)" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load net {Dcolumn#1.sva#2(8)} -pin  "reg(Dcolumn#1.sva#2)" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Dcolumn#1.sva#2}
+load inst "not#10" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#10} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {fsm_output#1(4)} -pin  "not#10" {A(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#23.itm}
+load net {not#10.itm} -pin  "not#10" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#10.itm}
+load inst "and#17" "and(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/and#17} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(1,2)"
+load net {and.dcpl#7} -pin  "and#17" {A0(0)} -attr @path {/Convolotion/Convolotion:core/and.dcpl#7}
+load net {not#10.itm} -pin  "and#17" {A1(0)} -attr @path {/Convolotion/Convolotion:core/not#10.itm}
+load net {and#17.itm} -pin  "and#17" {Z(0)} -attr @path {/Convolotion/Convolotion:core/and#17.itm}
+load inst "mux#16" "mux(2,9)" "INTERFACE" -attr xrf 24710 -attr oid 119 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16} -attr area 8.275807 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(9,1,2)"
+load net {Drow#1.sva#2(0)} -pin  "mux#16" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(1)} -pin  "mux#16" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(2)} -pin  "mux#16" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(3)} -pin  "mux#16" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(4)} -pin  "mux#16" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(5)} -pin  "mux#16" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(6)} -pin  "mux#16" {A0(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(7)} -pin  "mux#16" {A0(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(8)} -pin  "mux#16" {A0(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {z.out#2(0)} -pin  "mux#16" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(1)} -pin  "mux#16" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(2)} -pin  "mux#16" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(3)} -pin  "mux#16" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(4)} -pin  "mux#16" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(5)} -pin  "mux#16" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(6)} -pin  "mux#16" {A1(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(7)} -pin  "mux#16" {A1(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {z.out#2(8)} -pin  "mux#16" {A1(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:acc#3.tmp.pdr).itm}
+load net {and#17.itm} -pin  "mux#16" {S(0)} -attr @path {/Convolotion/Convolotion:core/and#17.itm}
+load net {mux#16.itm(0)} -pin  "mux#16" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(1)} -pin  "mux#16" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(2)} -pin  "mux#16" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(3)} -pin  "mux#16" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(4)} -pin  "mux#16" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(5)} -pin  "mux#16" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(6)} -pin  "mux#16" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(7)} -pin  "mux#16" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(8)} -pin  "mux#16" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load inst "not#33" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#33} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {or.dcpl#19} -pin  "not#33" {A(0)} -attr @path {/Convolotion/Convolotion:core/or.dcpl#19}
+load net {not#33.itm} -pin  "not#33" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#33.itm}
+load inst "and#30" "and(2,9)" "INTERFACE" -attr xrf 24711 -attr oid 120 -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30} -attr area 6.569492 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(9,2)"
+load net {mux#16.itm(0)} -pin  "and#30" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(1)} -pin  "and#30" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(2)} -pin  "and#30" {A0(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(3)} -pin  "and#30" {A0(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(4)} -pin  "and#30" {A0(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(5)} -pin  "and#30" {A0(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(6)} -pin  "and#30" {A0(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(7)} -pin  "and#30" {A0(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {mux#16.itm(8)} -pin  "and#30" {A0(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#16.itm}
+load net {not#33.itm} -pin  "and#30" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {not#33.itm} -pin  "and#30" {A1(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/exs#8.itm}
+load net {and#30.itm(0)} -pin  "and#30" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(1)} -pin  "and#30" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(2)} -pin  "and#30" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(3)} -pin  "and#30" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(4)} -pin  "and#30" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(5)} -pin  "and#30" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(6)} -pin  "and#30" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(7)} -pin  "and#30" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(8)} -pin  "and#30" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load inst "reg(Drow#1.sva#2)" "reg(9,1,0,0,1)" "INTERFACE" -attr xrf 24712 -attr oid 121 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(Drow#1.sva#2)}
+load net {and#30.itm(0)} -pin  "reg(Drow#1.sva#2)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(1)} -pin  "reg(Drow#1.sva#2)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(2)} -pin  "reg(Drow#1.sva#2)" {D(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(3)} -pin  "reg(Drow#1.sva#2)" {D(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(4)} -pin  "reg(Drow#1.sva#2)" {D(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(5)} -pin  "reg(Drow#1.sva#2)" {D(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(6)} -pin  "reg(Drow#1.sva#2)" {D(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(7)} -pin  "reg(Drow#1.sva#2)" {D(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {and#30.itm(8)} -pin  "reg(Drow#1.sva#2)" {D(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/and#30.itm}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(2)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(3)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(4)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(5)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(6)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(7)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {GND} -pin  "reg(Drow#1.sva#2)" {DRs(8)} -attr @path {/Convolotion/Convolotion:core/C0_11#4}
+load net {clk} -pin  "reg(Drow#1.sva#2)" {clk} -attr xrf 24713 -attr oid 122 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(Drow#1.sva#2)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {Drow#1.sva#2(0)} -pin  "reg(Drow#1.sva#2)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(1)} -pin  "reg(Drow#1.sva#2)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(2)} -pin  "reg(Drow#1.sva#2)" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(3)} -pin  "reg(Drow#1.sva#2)" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(4)} -pin  "reg(Drow#1.sva#2)" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(5)} -pin  "reg(Drow#1.sva#2)" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(6)} -pin  "reg(Drow#1.sva#2)" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(7)} -pin  "reg(Drow#1.sva#2)" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load net {Drow#1.sva#2(8)} -pin  "reg(Drow#1.sva#2)" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Drow#1.sva#2}
+load inst "for:for:for:for:else:mux#1" "mux(16,1)" "INTERFACE" -attr xrf 24714 -attr oid 123 -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux#1} -attr area 10.064643 -attr delay 2.684479 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(1,4,16)"
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A0(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A1(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A2(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A3(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A4(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A5(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {DC} -pin  "for:for:for:for:else:mux#1" {A6(0)} -attr @path {/Convolotion/Convolotion:core/C-_1}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A7(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#21}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A8(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#22}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A9(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#23}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A10(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#24}
+load net {PWR} -pin  "for:for:for:for:else:mux#1" {A11(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#25}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A12(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#26}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A13(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#27}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A14(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#28}
+load net {GND} -pin  "for:for:for:for:else:mux#1" {A15(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#29}
+load net {for:for:for:for:else:acc#6.sdt(0)} -pin  "for:for:for:for:else:mux#1" {S(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(0)} -pin  "for:for:for:for:else:mux#1" {S(1)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(1)} -pin  "for:for:for:for:else:mux#1" {S(2)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(2)} -pin  "for:for:for:for:else:mux#1" {S(3)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:mux#1.itm#2} -pin  "for:for:for:for:else:mux#1" {Z(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux#1.itm#2}
+load inst "reg(for:for:for:for:else:mux#1.itm)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 24715 -attr oid 124 -attr @path {/Convolotion/Convolotion:core/reg(for:for:for:for:else:mux#1.itm)}
+load net {for:for:for:for:else:mux#1.itm#2} -pin  "reg(for:for:for:for:else:mux#1.itm)" {D(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux#1.itm#2}
+load net {GND} -pin  "reg(for:for:for:for:else:mux#1.itm)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_1}
+load net {clk} -pin  "reg(for:for:for:for:else:mux#1.itm)" {clk} -attr xrf 24716 -attr oid 125 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(for:for:for:for:else:mux#1.itm)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {for:for:for:for:else:mux#1.itm} -pin  "reg(for:for:for:for:else:mux#1.itm)" {Z(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux#1.itm}
+load inst "for:for:for:for:else:mux" "mux(16,2)" "INTERFACE" -attr xrf 24717 -attr oid 126 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux} -attr area 20.129286 -attr delay 2.684479 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,4,16)"
+load net {DC} -pin  "for:for:for:for:else:mux" {A0(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A0(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A1(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A1(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A2(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A2(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A3(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A3(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A4(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A4(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A5(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A5(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A6(0)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {DC} -pin  "for:for:for:for:else:mux" {A6(1)} -attr @path {/Convolotion/Convolotion:core/C--_2}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A7(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#12}
+load net {GND} -pin  "for:for:for:for:else:mux" {A7(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#12}
+load net {GND} -pin  "for:for:for:for:else:mux" {A8(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#13}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A8(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#13}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A9(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#14}
+load net {GND} -pin  "for:for:for:for:else:mux" {A9(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#14}
+load net {GND} -pin  "for:for:for:for:else:mux" {A10(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#15}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A10(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#15}
+load net {GND} -pin  "for:for:for:for:else:mux" {A11(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#16}
+load net {GND} -pin  "for:for:for:for:else:mux" {A11(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#16}
+load net {GND} -pin  "for:for:for:for:else:mux" {A12(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#17}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A12(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#17}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A13(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#18}
+load net {GND} -pin  "for:for:for:for:else:mux" {A13(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#18}
+load net {GND} -pin  "for:for:for:for:else:mux" {A14(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#19}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A14(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#19}
+load net {PWR} -pin  "for:for:for:for:else:mux" {A15(0)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#20}
+load net {GND} -pin  "for:for:for:for:else:mux" {A15(1)} -attr @path {/Convolotion/Convolotion:core/kernel.rom#20}
+load net {for:for:for:for:else:acc#6.sdt(0)} -pin  "for:for:for:for:else:mux" {S(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(0)} -pin  "for:for:for:for:else:mux" {S(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(1)} -pin  "for:for:for:for:else:mux" {S(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:acc#7.itm(2)} -pin  "for:for:for:for:else:mux" {S(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#7}
+load net {for:for:for:for:else:mux.itm#2(0)} -pin  "for:for:for:for:else:mux" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm#2}
+load net {for:for:for:for:else:mux.itm#2(1)} -pin  "for:for:for:for:else:mux" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm#2}
+load inst "reg(for:for:for:for:else:mux.itm)" "reg(2,1,0,0,1)" "INTERFACE" -attr xrf 24718 -attr oid 127 -attr vt d -attr @path {/Convolotion/Convolotion:core/reg(for:for:for:for:else:mux.itm)}
+load net {for:for:for:for:else:mux.itm#2(0)} -pin  "reg(for:for:for:for:else:mux.itm)" {D(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm#2}
+load net {for:for:for:for:else:mux.itm#2(1)} -pin  "reg(for:for:for:for:else:mux.itm)" {D(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm#2}
+load net {GND} -pin  "reg(for:for:for:for:else:mux.itm)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {GND} -pin  "reg(for:for:for:for:else:mux.itm)" {DRs(1)} -attr @path {/Convolotion/Convolotion:core/C0_2}
+load net {clk} -pin  "reg(for:for:for:for:else:mux.itm)" {clk} -attr xrf 24719 -attr oid 128 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(for:for:for:for:else:mux.itm)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {for:for:for:for:else:mux.itm(0)} -pin  "reg(for:for:for:for:else:mux.itm)" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm}
+load net {for:for:for:for:else:mux.itm(1)} -pin  "reg(for:for:for:for:else:mux.itm)" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mux.itm}
+load inst "for:for:for:for:not" "not(1)" "INTERFACE" -attr xrf 24720 -attr oid 129 -attr @path {/Convolotion/Convolotion:core/for:for:for:for:not} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {z.out#1(1)} -pin  "for:for:for:for:not" {A(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:slc.itm}
+load net {for:for:for:for:not.itm} -pin  "for:for:for:for:not" {Z(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:not.itm}
+load inst "reg(exit:for:for:for:for)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 24721 -attr oid 130 -attr @path {/Convolotion/Convolotion:core/reg(exit:for:for:for:for)}
+load net {for:for:for:for:not.itm} -pin  "reg(exit:for:for:for:for)" {D(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:not.itm}
+load net {GND} -pin  "reg(exit:for:for:for:for)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_1}
+load net {clk} -pin  "reg(exit:for:for:for:for)" {clk} -attr xrf 24722 -attr oid 131 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(exit:for:for:for:for)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {exit:for:for:for:for} -pin  "reg(exit:for:for:for:for)" {Z(0)} -attr @path {/Convolotion/Convolotion:core/exit:for:for:for:for}
+load inst "for:for:for:for:if:or#2" "or(4,1)" "INTERFACE" -attr xrf 24723 -attr oid 132 -attr @path {/Convolotion/Convolotion:core/for:for:for:for:if:or#2} -attr area 1.380120 -attr delay 0.795815 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_or(1,4)"
+load net {for:for:for:for:oelse#2:acc.itm(1)} -pin  "for:for:for:for:if:or#2" {A0(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:slc.itm}
+load net {z.out#2(10)} -pin  "for:for:for:for:if:or#2" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva)#2.itm}
+load net {z.out#3(9)} -pin  "for:for:for:for:if:or#2" {A2(0)} -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva)#2.itm}
+load net {z.out#3(10)} -pin  "for:for:for:for:if:or#2" {A3(0)} -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva)#3.itm}
+load net {for:for:for:for:if:or#2.itm} -pin  "for:for:for:for:if:or#2" {Z(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:if:or#2.itm}
+load inst "reg(for:for:for:for:lor.lpi#4.dfm)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 24724 -attr oid 133 -attr @path {/Convolotion/Convolotion:core/reg(for:for:for:for:lor.lpi#4.dfm)}
+load net {for:for:for:for:if:or#2.itm} -pin  "reg(for:for:for:for:lor.lpi#4.dfm)" {D(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:if:or#2.itm}
+load net {GND} -pin  "reg(for:for:for:for:lor.lpi#4.dfm)" {DRs(0)} -attr @path {/Convolotion/Convolotion:core/C0_1}
+load net {clk} -pin  "reg(for:for:for:for:lor.lpi#4.dfm)" {clk} -attr xrf 24725 -attr oid 134 -attr @path {/Convolotion/Convolotion:core/clk}
+load net {rst} -pin  "reg(for:for:for:for:lor.lpi#4.dfm)" {Rs(0)} -attr @path {/Convolotion/Convolotion:core/rst}
+load net {for:for:for:for:lor.lpi#4.dfm} -pin  "reg(for:for:for:for:lor.lpi#4.dfm)" {Z(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:lor.lpi#4.dfm}
+load inst "for:for:for:for:else:acc#6" "add(2,0,2,0,3)" "INTERFACE" -attr xrf 24726 -attr oid 135 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#6} -attr area 3.352794 -attr delay 0.971483 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,3)"
+load net {Krow#1.sva(0)} -pin  "for:for:for:for:else:acc#6" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#8).itm}
+load net {Krow#1.sva(1)} -pin  "for:for:for:for:else:acc#6" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#8).itm}
+load net {Kcolumn#1.sva(0)} -pin  "for:for:for:for:else:acc#6" {B(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:asn#1.itm}
+load net {Kcolumn#1.sva(1)} -pin  "for:for:for:for:else:acc#6" {B(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:asn#1.itm}
+load net {for:for:for:for:else:acc#6.sdt(0)} -pin  "for:for:for:for:else:acc#6" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#6.sdt}
+load net {for:for:for:for:else:acc#6.sdt(1)} -pin  "for:for:for:for:else:acc#6" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#6.sdt}
+load net {for:for:for:for:else:acc#6.sdt(2)} -pin  "for:for:for:for:else:acc#6" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#6.sdt}
+load inst "for:for:for:for:oelse#2:not" "not(2)" "INTERFACE" -attr xrf 24727 -attr oid 136 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(2)"
+load net {z.out#2(9)} -pin  "for:for:for:for:oelse#2:not" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva)#1.itm}
+load net {z.out#2(10)} -pin  "for:for:for:for:oelse#2:not" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva)#1.itm}
+load net {for:for:for:for:oelse#2:not.itm(0)} -pin  "for:for:for:for:oelse#2:not" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not.itm}
+load net {for:for:for:for:oelse#2:not.itm(1)} -pin  "for:for:for:for:oelse#2:not" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not.itm}
+load inst "for:for:for:for:oelse#2:acc" "add(2,-1,1,0,2)" "INTERFACE" -attr xrf 24728 -attr oid 137 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:acc} -attr area 3.352794 -attr delay 0.971483 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,2)"
+load net {for:for:for:for:oelse#2:not.itm(0)} -pin  "for:for:for:for:oelse#2:acc" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not.itm}
+load net {for:for:for:for:oelse#2:not.itm(1)} -pin  "for:for:for:for:oelse#2:acc" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:not.itm}
+load net {PWR} -pin  "for:for:for:for:oelse#2:acc" {B(0)} -attr @path {/Convolotion/Convolotion:core/C1_1}
+load net {for:for:for:for:oelse#2:acc.itm(0)} -pin  "for:for:for:for:oelse#2:acc" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:acc.itm}
+load net {for:for:for:for:oelse#2:acc.itm(1)} -pin  "for:for:for:for:oelse#2:acc" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:acc.itm}
+load inst "for:for:for:for:else:acc#7" "add(2,0,2,0,3)" "INTERFACE" -attr xrf 24729 -attr oid 138 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#7} -attr area 3.353794 -attr delay 0.971483 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,3)"
+load net {for:for:for:for:else:acc#6.sdt(1)} -pin  "for:for:for:for:else:acc#7" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:acc#6.sdt)#1.itm}
+load net {for:for:for:for:else:acc#6.sdt(2)} -pin  "for:for:for:for:else:acc#7" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:else:acc#6.sdt)#1.itm}
+load net {Krow#1.sva(0)} -pin  "for:for:for:for:else:acc#7" {B(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#7).itm}
+load net {Krow#1.sva(1)} -pin  "for:for:for:for:else:acc#7" {B(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/asn(for:for:for:for:else:asn#7).itm}
+load net {for:for:for:for:else:acc#7.itm(0)} -pin  "for:for:for:for:else:acc#7" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#7.itm}
+load net {for:for:for:for:else:acc#7.itm(1)} -pin  "for:for:for:for:else:acc#7" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#7.itm}
+load net {for:for:for:for:else:acc#7.itm(2)} -pin  "for:for:for:for:else:acc#7" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#7.itm}
+load inst "for:for:for:for:else:or" "or(2,8)" "INTERFACE" -attr xrf 24730 -attr oid 139 -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:or} -attr area 5.838659 -attr delay 0.397907 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_or(8,2)"
+load net {slc.sat.sva(0)} -pin  "for:for:for:for:else:or" {A0(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(1)} -pin  "for:for:for:for:else:or" {A0(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(2)} -pin  "for:for:for:for:else:or" {A0(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(3)} -pin  "for:for:for:for:else:or" {A0(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(4)} -pin  "for:for:for:for:else:or" {A0(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(5)} -pin  "for:for:for:for:else:or" {A0(5)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(6)} -pin  "for:for:for:for:else:or" {A0(6)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(7)} -pin  "for:for:for:for:else:or" {A0(7)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc(slc.sat.sva).itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:or" {A1(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:exs.itm}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(0)} -pin  "for:for:for:for:else:or" {Z(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(1)} -pin  "for:for:for:for:else:or" {Z(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(2)} -pin  "for:for:for:for:else:or" {Z(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(3)} -pin  "for:for:for:for:else:or" {Z(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(4)} -pin  "for:for:for:for:else:or" {Z(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(5)} -pin  "for:for:for:for:else:or" {Z(5)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(6)} -pin  "for:for:for:for:else:or" {Z(6)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load net {for:for:for:for:else:ac_fixed:cctor.sva(7)} -pin  "for:for:for:for:else:or" {Z(7)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:ac_fixed:cctor.sva}
+load inst "for:for:for:for:else:mul#1" "mul(8,0,5,0,12)" "INTERFACE" -attr xrf 24731 -attr oid 140 -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1} -attr area 340.284558 -attr delay 2.858169 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mul(5,0,8,0,12)"
+load net {in:rsc:singleport.data_out(0)} -pin  "for:for:for:for:else:mul#1" {A(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(1)} -pin  "for:for:for:for:else:mul#1" {A(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(2)} -pin  "for:for:for:for:else:mul#1" {A(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(3)} -pin  "for:for:for:for:else:mul#1" {A(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(4)} -pin  "for:for:for:for:else:mul#1" {A(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(5)} -pin  "for:for:for:for:else:mul#1" {A(5)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(6)} -pin  "for:for:for:for:else:mul#1" {A(6)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(7)} -pin  "for:for:for:for:else:mul#1" {A(7)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.data_out}
+load net {for:for:for:for:else:mux#1.itm} -pin  "for:for:for:for:else:mul#1" {B(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {for:for:for:for:else:mux#1.itm} -pin  "for:for:for:for:else:mul#1" {B(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {GND} -pin  "for:for:for:for:else:mul#1" {B(2)} -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {for:for:for:for:else:mux.itm(0)} -pin  "for:for:for:for:else:mul#1" {B(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {for:for:for:for:else:mux.itm(1)} -pin  "for:for:for:for:else:mul#1" {B(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/conc.itm}
+load net {for:for:for:for:else:mul#1.itm(0)} -pin  "for:for:for:for:else:mul#1" {Z(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(1)} -pin  "for:for:for:for:else:mul#1" {Z(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(2)} -pin  "for:for:for:for:else:mul#1" {Z(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(3)} -pin  "for:for:for:for:else:mul#1" {Z(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(4)} -pin  "for:for:for:for:else:mul#1" {Z(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(5)} -pin  "for:for:for:for:else:mul#1" {Z(5)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(6)} -pin  "for:for:for:for:else:mul#1" {Z(6)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(7)} -pin  "for:for:for:for:else:mul#1" {Z(7)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(8)} -pin  "for:for:for:for:else:mul#1" {Z(8)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(9)} -pin  "for:for:for:for:else:mul#1" {Z(9)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(10)} -pin  "for:for:for:for:else:mul#1" {Z(10)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load net {for:for:for:for:else:mul#1.itm(11)} -pin  "for:for:for:for:else:mul#1" {Z(11)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:mul#1.itm}
+load inst "for:for:for:for:else:acc#4" "add(8,0,5,0,9)" "INTERFACE" -attr xrf 24732 -attr oid 141 -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc#4} -attr area 9.306576 -attr delay 1.421563 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(8,0,5,0,9)"
+load net {Result#1.lpi#4.reg} -pin  "for:for:for:for:else:acc#4" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(0)} -pin  "for:for:for:for:else:acc#4" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(1)} -pin  "for:for:for:for:else:acc#4" {A(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(2)} -pin  "for:for:for:for:else:acc#4" {A(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(3)} -pin  "for:for:for:for:else:acc#4" {A(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(4)} -pin  "for:for:for:for:else:acc#4" {A(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg1.lpi#4.reg(5)} -pin  "for:for:for:for:else:acc#4" {A(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {Result.sg2.lpi#4.reg} -pin  "for:for:for:for:else:acc#4" {A(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:conc#4.itm}
+load net {for:for:for:for:else:mul#1.itm(7)} -pin  "for:for:for:for:else:acc#4" {B(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {for:for:for:for:else:mul#1.itm(8)} -pin  "for:for:for:for:else:acc#4" {B(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {for:for:for:for:else:mul#1.itm(9)} -pin  "for:for:for:for:else:acc#4" {B(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {for:for:for:for:else:mul#1.itm(10)} -pin  "for:for:for:for:else:acc#4" {B(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {for:for:for:for:else:mul#1.itm(11)} -pin  "for:for:for:for:else:acc#4" {B(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:slc(for:for:for:for:else:mul#1.sdt).itm}
+load net {slc.sat.sva(0)} -pin  "for:for:for:for:else:acc#4" {Z(0)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(1)} -pin  "for:for:for:for:else:acc#4" {Z(1)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(2)} -pin  "for:for:for:for:else:acc#4" {Z(2)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(3)} -pin  "for:for:for:for:else:acc#4" {Z(3)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(4)} -pin  "for:for:for:for:else:acc#4" {Z(4)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(5)} -pin  "for:for:for:for:else:acc#4" {Z(5)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(6)} -pin  "for:for:for:for:else:acc#4" {Z(6)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(7)} -pin  "for:for:for:for:else:acc#4" {Z(7)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load net {slc.sat.sva(8)} -pin  "for:for:for:for:else:acc#4" {Z(8)} -attr vt dc -attr @path {/Convolotion/Convolotion:core/slc.sat.sva}
+load inst "or#19" "or(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/or#19} -attr area 0.730832 -attr delay 0.397907 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_or(1,2)"
+load net {fsm_output#1(0)} -pin  "or#19" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#7.itm}
+load net {fsm_output#1(5)} -pin  "or#19" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#24.itm}
+load net {or.dcpl#19} -pin  "or#19" {Z(0)} -attr @path {/Convolotion/Convolotion:core/or.dcpl#19}
+load inst "or#22" "or(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/or#22} -attr area 0.730832 -attr delay 0.397907 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_or(1,2)"
+load net {or.dcpl#19} -pin  "or#22" {A0(0)} -attr @path {/Convolotion/Convolotion:core/or.dcpl#19}
+load net {fsm_output#1(4)} -pin  "or#22" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#22.itm}
+load net {or#22.cse} -pin  "or#22" {Z(0)} -attr @path {/Convolotion/Convolotion:core/or#22.cse}
+load inst "nor#2" "nor(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nor#2} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nor(1,2)"
+load net {fsm_output#1(0)} -pin  "nor#2" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#8.itm}
+load net {fsm_output#1(5)} -pin  "nor#2" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#25.itm}
+load net {and.dcpl#7} -pin  "nor#2" {Z(0)} -attr @path {/Convolotion/Convolotion:core/and.dcpl#7}
+load inst "and#10" "and(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/and#10} -attr area 0.730832 -attr delay 0.408884 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_and(1,2)"
+load net {fsm_output#1(2)} -pin  "and#10" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#16.itm}
+load net {for:for:for:for:lor.lpi#4.dfm} -pin  "and#10" {A1(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:lor.lpi#4.dfm}
+load net {and#10.itm} -pin  "and#10" {Z(0)} -attr @path {/Convolotion/Convolotion:core/and#10.itm}
+load inst "or#24" "or(3,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/or#24} -attr area 1.055476 -attr delay 0.630668 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_or(1,3)"
+load net {and#10.itm} -pin  "or#24" {A0(0)} -attr @path {/Convolotion/Convolotion:core/and#10.itm}
+load net {fsm_output#1(3)} -pin  "or#24" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#19.itm}
+load net {fsm_output#1(1)} -pin  "or#24" {A2(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#12.itm}
+load net {or#24.cse} -pin  "or#24" {Z(0)} -attr @path {/Convolotion/Convolotion:core/or#24.cse}
+load inst "for:for:for:for:else:acc" "add(9,-1,2,1,9)" "INTERFACE" -attr xrf 24733 -attr oid 142 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc} -attr area 10.000000 -attr delay 1.105152 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)"
+load net {z.out#2(0)} -pin  "for:for:for:for:else:acc" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(1)} -pin  "for:for:for:for:else:acc" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(2)} -pin  "for:for:for:for:else:acc" {A(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(3)} -pin  "for:for:for:for:else:acc" {A(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(4)} -pin  "for:for:for:for:else:acc" {A(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(5)} -pin  "for:for:for:for:else:acc" {A(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(6)} -pin  "for:for:for:for:else:acc" {A(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(7)} -pin  "for:for:for:for:else:acc" {A(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#2(8)} -pin  "for:for:for:for:else:acc" {A(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv2.sva).itm}
+load net {z.out#3(9)} -pin  "for:for:for:for:else:acc" {B(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva).itm}
+load net {z.out#3(10)} -pin  "for:for:for:for:else:acc" {B(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/slc(conv1.sva).itm}
+load net {for:for:for:for:else:acc.itm(0)} -pin  "for:for:for:for:else:acc" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(1)} -pin  "for:for:for:for:else:acc" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(2)} -pin  "for:for:for:for:else:acc" {Z(2)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(3)} -pin  "for:for:for:for:else:acc" {Z(3)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(4)} -pin  "for:for:for:for:else:acc" {Z(4)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(5)} -pin  "for:for:for:for:else:acc" {Z(5)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(6)} -pin  "for:for:for:for:else:acc" {Z(6)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(7)} -pin  "for:for:for:for:else:acc" {Z(7)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load net {for:for:for:for:else:acc.itm(8)} -pin  "for:for:for:for:else:acc" {Z(8)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:else:acc.itm}
+load inst "nor#5" "nor(3,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nor#5} -attr area 1.055476 -attr delay 0.648066 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nor(1,3)"
+load net {z.out#3(9)} -pin  "nor#5" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:acc#1.tmp)#1.itm}
+load net {z.out#3(10)} -pin  "nor#5" {A1(0)} -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:acc#1.tmp).itm}
+load net {z.out#2(10)} -pin  "nor#5" {A2(0)} -attr @path {/Convolotion/Convolotion:core/slc(for:for:for:for:acc#3.tmp).itm}
+load net {nor#5.itm} -pin  "nor#5" {Z(0)} -attr @path {/Convolotion/Convolotion:core/nor#5.itm}
+load inst "not#14" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#14} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {for:for:for:for:oelse#2:acc.itm(1)} -pin  "not#14" {A(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:for:oelse#2:slc#1.itm}
+load net {not#14.itm} -pin  "not#14" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#14.itm}
+load inst "nand#1" "nand(3,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nand#1} -attr area 1.055476 -attr delay 0.630668 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nand(1,3)"
+load net {nor#5.itm} -pin  "nand#1" {A0(0)} -attr @path {/Convolotion/Convolotion:core/nor#5.itm}
+load net {not#14.itm} -pin  "nand#1" {A1(0)} -attr @path {/Convolotion/Convolotion:core/not#14.itm}
+load net {fsm_output#1(1)} -pin  "nand#1" {A2(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#13.itm}
+load net {in:rsc:singleport.re} -pin  "nand#1" {Z(0)} -attr @path {/Convolotion/Convolotion:core/in:rsc:singleport.re}
+load inst "not#25" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#25} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {z.out#1(1)} -pin  "not#25" {A(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:slc.itm}
+load net {not#25.itm} -pin  "not#25" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#25.itm}
+load inst "nand" "nand(2,1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/nand} -attr area 0.730832 -attr delay 0.397907 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_nand(1,2)"
+load net {fsm_output#1(3)} -pin  "nand" {A0(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#34.itm}
+load net {not#25.itm} -pin  "nand" {A1(0)} -attr @path {/Convolotion/Convolotion:core/not#25.itm}
+load net {out:rsc:singleport.we} -pin  "nand" {Z(0)} -attr @path {/Convolotion/Convolotion:core/out:rsc:singleport.we}
+load inst "mux#10" "mux(2,2)" "INTERFACE" -attr xrf 24734 -attr oid 143 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10} -attr area 1.839846 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,1,2)"
+load net {Kcolumn#1.sva(0)} -pin  "mux#10" {A0(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Kcolumn#1.sva(1)} -pin  "mux#10" {A0(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Krow#1.sva(0)} -pin  "mux#10" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {Krow#1.sva(1)} -pin  "mux#10" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {fsm_output#1(3)} -pin  "mux#10" {S(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#35.itm}
+load net {mux#10.itm(0)} -pin  "mux#10" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10.itm}
+load net {mux#10.itm(1)} -pin  "mux#10" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#10.itm}
+load inst "for:for:for:for:acc#8" "add(2,-1,1,1,2)" "INTERFACE" -attr xrf 24735 -attr oid 144 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8} -attr area 3.000000 -attr delay 0.808645 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,1,3)"
+load net {Krow#1.sva(0)} -pin  "for:for:for:for:acc#8" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {Krow#1.sva(1)} -pin  "for:for:for:for:acc#8" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Krow#1.sva}
+load net {PWR} -pin  "for:for:for:for:acc#8" {B(0)} -attr @path {/Convolotion/Convolotion:core/Cn1_1}
+load net {for:for:for:for:acc#8.itm(0)} -pin  "for:for:for:for:acc#8" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8.itm}
+load net {for:for:for:for:acc#8.itm(1)} -pin  "for:for:for:for:acc#8" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8.itm}
+load inst "mux#7" "mux(2,2)" "INTERFACE" -attr xrf 24736 -attr oid 145 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#7} -attr area 1.839846 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,1,2)"
+load net {PWR} -pin  "mux#7" {A0(0)} -attr @path {/Convolotion/Convolotion:core/C1_3#1}
+load net {GND} -pin  "mux#7" {A0(1)} -attr @path {/Convolotion/Convolotion:core/C1_3#1}
+load net {for:for:for:for:acc#8.itm(0)} -pin  "mux#7" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8.itm}
+load net {for:for:for:for:acc#8.itm(1)} -pin  "mux#7" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#8.itm}
+load net {fsm_output#1(4)} -pin  "mux#7" {S(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#29.itm}
+load net {mux#7.itm(0)} -pin  "mux#7" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#7.itm}
+load net {mux#7.itm(1)} -pin  "mux#7" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#7.itm}
+load inst "for:for:for:for:acc#7" "add(2,-1,1,1,2)" "INTERFACE" -attr xrf 24737 -attr oid 146 -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7} -attr area 3.000000 -attr delay 0.808645 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,1,1,3)"
+load net {Kcolumn#1.sva(0)} -pin  "for:for:for:for:acc#7" {A(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {Kcolumn#1.sva(1)} -pin  "for:for:for:for:acc#7" {A(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/Kcolumn#1.sva}
+load net {PWR} -pin  "for:for:for:for:acc#7" {B(0)} -attr @path {/Convolotion/Convolotion:core/Cn1_1}
+load net {for:for:for:for:acc#7.itm(0)} -pin  "for:for:for:for:acc#7" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7.itm}
+load net {for:for:for:for:acc#7.itm(1)} -pin  "for:for:for:for:acc#7" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7.itm}
+load inst "mux#9" "mux(2,2)" "INTERFACE" -attr xrf 24738 -attr oid 147 -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#9} -attr area 1.839846 -attr delay 0.946750 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_mux(2,1,2)"
+load net {PWR} -pin  "mux#9" {A0(0)} -attr @path {/Convolotion/Convolotion:core/C1_3#2}
+load net {GND} -pin  "mux#9" {A0(1)} -attr @path {/Convolotion/Convolotion:core/C1_3#2}
+load net {for:for:for:for:acc#7.itm(0)} -pin  "mux#9" {A1(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7.itm}
+load net {for:for:for:for:acc#7.itm(1)} -pin  "mux#9" {A1(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/for:for:for:for:acc#7.itm}
+load net {fsm_output#1(5)} -pin  "mux#9" {S(0)} -attr @path {/Convolotion/Convolotion:core/slc(fsm_output)#28.itm}
+load net {mux#9.itm(0)} -pin  "mux#9" {Z(0)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#9.itm}
+load net {mux#9.itm(1)} -pin  "mux#9" {Z(1)} -attr vt d -attr @path {/Convolotion/Convolotion:core/mux#9.itm}
+load inst "not#8" "not(1)" "INTERFACE" -attr @path {/Convolotion/Convolotion:core/not#8} -attr area 0.001000 -attr qmod "mgc_Altera-Cyclone-II-6_beh_psr.mgc_not(1)"
+load net {z.out#1(1)} -pin  "not#8" {A(0)} -attr @path {/Convolotion/Convolotion:core/for:for:for:slc#4.itm}
+load net {not#8.itm} -pin  "not#8" {Z(0)} -attr @path {/Convolotion/Convolotion:core/not#8.itm}
+### END MODULE 
+
+module new "Convolotion" "v9"
+load port clk input -attr xrf 24739 -attr oid 148 -attr vt d -attr @path {/Convolotion/clk}
+load port rst input -attr xrf 24740 -attr oid 149 -attr vt d -attr @path {/Convolotion/rst}
+load portBus in:rsc:singleport.data_in(7:0) output 8 in:rsc:singleport.data_in(7) in:rsc:singleport.data_in(6) in:rsc:singleport.data_in(5) in:rsc:singleport.data_in(4) in:rsc:singleport.data_in(3) in:rsc:singleport.data_in(2) in:rsc:singleport.data_in(1) in:rsc:singleport.data_in(0) -attr xrf 24741 -attr oid 150 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load portBus in:rsc:singleport.addr(17:0) output 18 in:rsc:singleport.addr(17) in:rsc:singleport.addr(16) in:rsc:singleport.addr(15) in:rsc:singleport.addr(14) in:rsc:singleport.addr(13) in:rsc:singleport.addr(12) in:rsc:singleport.addr(11) in:rsc:singleport.addr(10) in:rsc:singleport.addr(9) in:rsc:singleport.addr(8) in:rsc:singleport.addr(7) in:rsc:singleport.addr(6) in:rsc:singleport.addr(5) in:rsc:singleport.addr(4) in:rsc:singleport.addr(3) in:rsc:singleport.addr(2) in:rsc:singleport.addr(1) in:rsc:singleport.addr(0) -attr xrf 24742 -attr oid 151 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load port in:rsc:singleport.re output -attr xrf 24743 -attr oid 152 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.re}
+load port in:rsc:singleport.we output -attr xrf 24744 -attr oid 153 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.we}
+load portBus in:rsc:singleport.data_out(7:0) input 8 in:rsc:singleport.data_out(7) in:rsc:singleport.data_out(6) in:rsc:singleport.data_out(5) in:rsc:singleport.data_out(4) in:rsc:singleport.data_out(3) in:rsc:singleport.data_out(2) in:rsc:singleport.data_out(1) in:rsc:singleport.data_out(0) -attr xrf 24745 -attr oid 154 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load portBus out:rsc:singleport.data_in(7:0) output 8 out:rsc:singleport.data_in(7) out:rsc:singleport.data_in(6) out:rsc:singleport.data_in(5) out:rsc:singleport.data_in(4) out:rsc:singleport.data_in(3) out:rsc:singleport.data_in(2) out:rsc:singleport.data_in(1) out:rsc:singleport.data_in(0) -attr xrf 24746 -attr oid 155 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load portBus out:rsc:singleport.addr(17:0) output 18 out:rsc:singleport.addr(17) out:rsc:singleport.addr(16) out:rsc:singleport.addr(15) out:rsc:singleport.addr(14) out:rsc:singleport.addr(13) out:rsc:singleport.addr(12) out:rsc:singleport.addr(11) out:rsc:singleport.addr(10) out:rsc:singleport.addr(9) out:rsc:singleport.addr(8) out:rsc:singleport.addr(7) out:rsc:singleport.addr(6) out:rsc:singleport.addr(5) out:rsc:singleport.addr(4) out:rsc:singleport.addr(3) out:rsc:singleport.addr(2) out:rsc:singleport.addr(1) out:rsc:singleport.addr(0) -attr xrf 24747 -attr oid 156 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load port out:rsc:singleport.re output -attr xrf 24748 -attr oid 157 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.re}
+load port out:rsc:singleport.we output -attr xrf 24749 -attr oid 158 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.we}
+load portBus out:rsc:singleport.data_out(7:0) input 8 out:rsc:singleport.data_out(7) out:rsc:singleport.data_out(6) out:rsc:singleport.data_out(5) out:rsc:singleport.data_out(4) out:rsc:singleport.data_out(3) out:rsc:singleport.data_out(2) out:rsc:singleport.data_out(1) out:rsc:singleport.data_out(0) -attr xrf 24750 -attr oid 159 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_out}
+load symbol "Convolotion:core" "orig" GEN \
+     port clk#1 input \
+     port rst#1 input \
+     portBus in:rsc:singleport.addr#1(17:0) output 18 in:rsc:singleport.addr#1(17) in:rsc:singleport.addr#1(16) in:rsc:singleport.addr#1(15) in:rsc:singleport.addr#1(14) in:rsc:singleport.addr#1(13) in:rsc:singleport.addr#1(12) in:rsc:singleport.addr#1(11) in:rsc:singleport.addr#1(10) in:rsc:singleport.addr#1(9) in:rsc:singleport.addr#1(8) in:rsc:singleport.addr#1(7) in:rsc:singleport.addr#1(6) in:rsc:singleport.addr#1(5) in:rsc:singleport.addr#1(4) in:rsc:singleport.addr#1(3) in:rsc:singleport.addr#1(2) in:rsc:singleport.addr#1(1) in:rsc:singleport.addr#1(0) \
+     port in:rsc:singleport.re#1 output \
+     portBus in:rsc:singleport.data_out#1(7:0) input 8 in:rsc:singleport.data_out#1(7) in:rsc:singleport.data_out#1(6) in:rsc:singleport.data_out#1(5) in:rsc:singleport.data_out#1(4) in:rsc:singleport.data_out#1(3) in:rsc:singleport.data_out#1(2) in:rsc:singleport.data_out#1(1) in:rsc:singleport.data_out#1(0) \
+     portBus out:rsc:singleport.data_in#1(7:0) output 8 out:rsc:singleport.data_in#1(7) out:rsc:singleport.data_in#1(6) out:rsc:singleport.data_in#1(5) out:rsc:singleport.data_in#1(4) out:rsc:singleport.data_in#1(3) out:rsc:singleport.data_in#1(2) out:rsc:singleport.data_in#1(1) out:rsc:singleport.data_in#1(0) \
+     portBus out:rsc:singleport.addr#1(17:0) output 18 out:rsc:singleport.addr#1(17) out:rsc:singleport.addr#1(16) out:rsc:singleport.addr#1(15) out:rsc:singleport.addr#1(14) out:rsc:singleport.addr#1(13) out:rsc:singleport.addr#1(12) out:rsc:singleport.addr#1(11) out:rsc:singleport.addr#1(10) out:rsc:singleport.addr#1(9) out:rsc:singleport.addr#1(8) out:rsc:singleport.addr#1(7) out:rsc:singleport.addr#1(6) out:rsc:singleport.addr#1(5) out:rsc:singleport.addr#1(4) out:rsc:singleport.addr#1(3) out:rsc:singleport.addr#1(2) out:rsc:singleport.addr#1(1) out:rsc:singleport.addr#1(0) \
+     port out:rsc:singleport.we#1 output \
+
+load net {in:rsc:singleport.addr.reg(0)} -attr vt d
+load net {in:rsc:singleport.addr.reg(1)} -attr vt d
+load net {in:rsc:singleport.addr.reg(2)} -attr vt d
+load net {in:rsc:singleport.addr.reg(3)} -attr vt d
+load net {in:rsc:singleport.addr.reg(4)} -attr vt d
+load net {in:rsc:singleport.addr.reg(5)} -attr vt d
+load net {in:rsc:singleport.addr.reg(6)} -attr vt d
+load net {in:rsc:singleport.addr.reg(7)} -attr vt d
+load net {in:rsc:singleport.addr.reg(8)} -attr vt d
+load net {in:rsc:singleport.addr.reg(9)} -attr vt d
+load net {in:rsc:singleport.addr.reg(10)} -attr vt d
+load net {in:rsc:singleport.addr.reg(11)} -attr vt d
+load net {in:rsc:singleport.addr.reg(12)} -attr vt d
+load net {in:rsc:singleport.addr.reg(13)} -attr vt d
+load net {in:rsc:singleport.addr.reg(14)} -attr vt d
+load net {in:rsc:singleport.addr.reg(15)} -attr vt d
+load net {in:rsc:singleport.addr.reg(16)} -attr vt d
+load net {in:rsc:singleport.addr.reg(17)} -attr vt d
+load netBundle {in:rsc:singleport.addr.reg} 18 {in:rsc:singleport.addr.reg(0)} {in:rsc:singleport.addr.reg(1)} {in:rsc:singleport.addr.reg(2)} {in:rsc:singleport.addr.reg(3)} {in:rsc:singleport.addr.reg(4)} {in:rsc:singleport.addr.reg(5)} {in:rsc:singleport.addr.reg(6)} {in:rsc:singleport.addr.reg(7)} {in:rsc:singleport.addr.reg(8)} {in:rsc:singleport.addr.reg(9)} {in:rsc:singleport.addr.reg(10)} {in:rsc:singleport.addr.reg(11)} {in:rsc:singleport.addr.reg(12)} {in:rsc:singleport.addr.reg(13)} {in:rsc:singleport.addr.reg(14)} {in:rsc:singleport.addr.reg(15)} {in:rsc:singleport.addr.reg(16)} {in:rsc:singleport.addr.reg(17)} -attr xrf 24751 -attr oid 160 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.data_in.reg(0)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(1)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(2)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(3)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(4)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(5)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(6)} -attr vt d
+load net {out:rsc:singleport.data_in.reg(7)} -attr vt d
+load netBundle {out:rsc:singleport.data_in.reg} 8 {out:rsc:singleport.data_in.reg(0)} {out:rsc:singleport.data_in.reg(1)} {out:rsc:singleport.data_in.reg(2)} {out:rsc:singleport.data_in.reg(3)} {out:rsc:singleport.data_in.reg(4)} {out:rsc:singleport.data_in.reg(5)} {out:rsc:singleport.data_in.reg(6)} {out:rsc:singleport.data_in.reg(7)} -attr xrf 24752 -attr oid 161 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.addr.reg(0)} -attr vt d
+load net {out:rsc:singleport.addr.reg(1)} -attr vt d
+load net {out:rsc:singleport.addr.reg(2)} -attr vt d
+load net {out:rsc:singleport.addr.reg(3)} -attr vt d
+load net {out:rsc:singleport.addr.reg(4)} -attr vt d
+load net {out:rsc:singleport.addr.reg(5)} -attr vt d
+load net {out:rsc:singleport.addr.reg(6)} -attr vt d
+load net {out:rsc:singleport.addr.reg(7)} -attr vt d
+load net {out:rsc:singleport.addr.reg(8)} -attr vt d
+load net {out:rsc:singleport.addr.reg(9)} -attr vt d
+load net {out:rsc:singleport.addr.reg(10)} -attr vt d
+load net {out:rsc:singleport.addr.reg(11)} -attr vt d
+load net {out:rsc:singleport.addr.reg(12)} -attr vt d
+load net {out:rsc:singleport.addr.reg(13)} -attr vt d
+load net {out:rsc:singleport.addr.reg(14)} -attr vt d
+load net {out:rsc:singleport.addr.reg(15)} -attr vt d
+load net {out:rsc:singleport.addr.reg(16)} -attr vt d
+load net {out:rsc:singleport.addr.reg(17)} -attr vt d
+load netBundle {out:rsc:singleport.addr.reg} 18 {out:rsc:singleport.addr.reg(0)} {out:rsc:singleport.addr.reg(1)} {out:rsc:singleport.addr.reg(2)} {out:rsc:singleport.addr.reg(3)} {out:rsc:singleport.addr.reg(4)} {out:rsc:singleport.addr.reg(5)} {out:rsc:singleport.addr.reg(6)} {out:rsc:singleport.addr.reg(7)} {out:rsc:singleport.addr.reg(8)} {out:rsc:singleport.addr.reg(9)} {out:rsc:singleport.addr.reg(10)} {out:rsc:singleport.addr.reg(11)} {out:rsc:singleport.addr.reg(12)} {out:rsc:singleport.addr.reg(13)} {out:rsc:singleport.addr.reg(14)} {out:rsc:singleport.addr.reg(15)} {out:rsc:singleport.addr.reg(16)} {out:rsc:singleport.addr.reg(17)} -attr xrf 24753 -attr oid 162 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {clk} -attr xrf 24754 -attr oid 163
+load net {clk} -port {clk} -attr xrf 24755 -attr oid 164
+load net {rst} -attr xrf 24756 -attr oid 165
+load net {rst} -port {rst} -attr xrf 24757 -attr oid 166
+load net {in:rsc:singleport.data_in(0)} -attr vt d
+load net {in:rsc:singleport.data_in(1)} -attr vt d
+load net {in:rsc:singleport.data_in(2)} -attr vt d
+load net {in:rsc:singleport.data_in(3)} -attr vt d
+load net {in:rsc:singleport.data_in(4)} -attr vt d
+load net {in:rsc:singleport.data_in(5)} -attr vt d
+load net {in:rsc:singleport.data_in(6)} -attr vt d
+load net {in:rsc:singleport.data_in(7)} -attr vt d
+load netBundle {in:rsc:singleport.data_in} 8 {in:rsc:singleport.data_in(0)} {in:rsc:singleport.data_in(1)} {in:rsc:singleport.data_in(2)} {in:rsc:singleport.data_in(3)} {in:rsc:singleport.data_in(4)} {in:rsc:singleport.data_in(5)} {in:rsc:singleport.data_in(6)} {in:rsc:singleport.data_in(7)} -attr xrf 24758 -attr oid 167 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(0)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(1)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(2)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(3)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(4)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(5)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(6)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {DC} -port {in:rsc:singleport.data_in(7)} -attr @path {/Convolotion/in:rsc:singleport.data_in}
+load net {in:rsc:singleport.addr(0)} -attr vt d
+load net {in:rsc:singleport.addr(1)} -attr vt d
+load net {in:rsc:singleport.addr(2)} -attr vt d
+load net {in:rsc:singleport.addr(3)} -attr vt d
+load net {in:rsc:singleport.addr(4)} -attr vt d
+load net {in:rsc:singleport.addr(5)} -attr vt d
+load net {in:rsc:singleport.addr(6)} -attr vt d
+load net {in:rsc:singleport.addr(7)} -attr vt d
+load net {in:rsc:singleport.addr(8)} -attr vt d
+load net {in:rsc:singleport.addr(9)} -attr vt d
+load net {in:rsc:singleport.addr(10)} -attr vt d
+load net {in:rsc:singleport.addr(11)} -attr vt d
+load net {in:rsc:singleport.addr(12)} -attr vt d
+load net {in:rsc:singleport.addr(13)} -attr vt d
+load net {in:rsc:singleport.addr(14)} -attr vt d
+load net {in:rsc:singleport.addr(15)} -attr vt d
+load net {in:rsc:singleport.addr(16)} -attr vt d
+load net {in:rsc:singleport.addr(17)} -attr vt d
+load netBundle {in:rsc:singleport.addr} 18 {in:rsc:singleport.addr(0)} {in:rsc:singleport.addr(1)} {in:rsc:singleport.addr(2)} {in:rsc:singleport.addr(3)} {in:rsc:singleport.addr(4)} {in:rsc:singleport.addr(5)} {in:rsc:singleport.addr(6)} {in:rsc:singleport.addr(7)} {in:rsc:singleport.addr(8)} {in:rsc:singleport.addr(9)} {in:rsc:singleport.addr(10)} {in:rsc:singleport.addr(11)} {in:rsc:singleport.addr(12)} {in:rsc:singleport.addr(13)} {in:rsc:singleport.addr(14)} {in:rsc:singleport.addr(15)} {in:rsc:singleport.addr(16)} {in:rsc:singleport.addr(17)} -attr xrf 24759 -attr oid 168 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(0)} -port {in:rsc:singleport.addr(0)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(1)} -port {in:rsc:singleport.addr(1)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(2)} -port {in:rsc:singleport.addr(2)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(3)} -port {in:rsc:singleport.addr(3)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(4)} -port {in:rsc:singleport.addr(4)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(5)} -port {in:rsc:singleport.addr(5)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(6)} -port {in:rsc:singleport.addr(6)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(7)} -port {in:rsc:singleport.addr(7)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(8)} -port {in:rsc:singleport.addr(8)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(9)} -port {in:rsc:singleport.addr(9)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(10)} -port {in:rsc:singleport.addr(10)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(11)} -port {in:rsc:singleport.addr(11)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(12)} -port {in:rsc:singleport.addr(12)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(13)} -port {in:rsc:singleport.addr(13)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(14)} -port {in:rsc:singleport.addr(14)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(15)} -port {in:rsc:singleport.addr(15)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(16)} -port {in:rsc:singleport.addr(16)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.addr.reg(17)} -port {in:rsc:singleport.addr(17)} -attr vt d -attr @path {/Convolotion/in:rsc:singleport.addr}
+load net {in:rsc:singleport.re} -attr xrf 24760 -attr oid 169 -attr vt d
+load net {in:rsc:singleport.re.reg} -port {in:rsc:singleport.re} -attr xrf 24761 -attr oid 170 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.re}
+load net {in:rsc:singleport.we} -attr xrf 24762 -attr oid 171 -attr vt d
+load net {PWR} -port {in:rsc:singleport.we} -attr xrf 24763 -attr oid 172 -attr @path {/Convolotion/in:rsc:singleport.we}
+load net {in:rsc:singleport.data_out(0)} -attr vt d
+load net {in:rsc:singleport.data_out(1)} -attr vt d
+load net {in:rsc:singleport.data_out(2)} -attr vt d
+load net {in:rsc:singleport.data_out(3)} -attr vt d
+load net {in:rsc:singleport.data_out(4)} -attr vt d
+load net {in:rsc:singleport.data_out(5)} -attr vt d
+load net {in:rsc:singleport.data_out(6)} -attr vt d
+load net {in:rsc:singleport.data_out(7)} -attr vt d
+load netBundle {in:rsc:singleport.data_out} 8 {in:rsc:singleport.data_out(0)} {in:rsc:singleport.data_out(1)} {in:rsc:singleport.data_out(2)} {in:rsc:singleport.data_out(3)} {in:rsc:singleport.data_out(4)} {in:rsc:singleport.data_out(5)} {in:rsc:singleport.data_out(6)} {in:rsc:singleport.data_out(7)} -attr xrf 24764 -attr oid 173 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(0)} -port {in:rsc:singleport.data_out(0)} -attr vt d
+load net {in:rsc:singleport.data_out(1)} -port {in:rsc:singleport.data_out(1)} -attr vt d
+load net {in:rsc:singleport.data_out(2)} -port {in:rsc:singleport.data_out(2)} -attr vt d
+load net {in:rsc:singleport.data_out(3)} -port {in:rsc:singleport.data_out(3)} -attr vt d
+load net {in:rsc:singleport.data_out(4)} -port {in:rsc:singleport.data_out(4)} -attr vt d
+load net {in:rsc:singleport.data_out(5)} -port {in:rsc:singleport.data_out(5)} -attr vt d
+load net {in:rsc:singleport.data_out(6)} -port {in:rsc:singleport.data_out(6)} -attr vt d
+load net {in:rsc:singleport.data_out(7)} -port {in:rsc:singleport.data_out(7)} -attr vt d
+load netBundle in:rsc:singleport.data_out 8 in:rsc:singleport.data_out(0) in:rsc:singleport.data_out(1) in:rsc:singleport.data_out(2) in:rsc:singleport.data_out(3) in:rsc:singleport.data_out(4) in:rsc:singleport.data_out(5) in:rsc:singleport.data_out(6) in:rsc:singleport.data_out(7) -attr xrf 24765 -attr oid 174 -attr vt d -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {out:rsc:singleport.data_in(0)} -attr vt d
+load net {out:rsc:singleport.data_in(1)} -attr vt d
+load net {out:rsc:singleport.data_in(2)} -attr vt d
+load net {out:rsc:singleport.data_in(3)} -attr vt d
+load net {out:rsc:singleport.data_in(4)} -attr vt d
+load net {out:rsc:singleport.data_in(5)} -attr vt d
+load net {out:rsc:singleport.data_in(6)} -attr vt d
+load net {out:rsc:singleport.data_in(7)} -attr vt d
+load netBundle {out:rsc:singleport.data_in} 8 {out:rsc:singleport.data_in(0)} {out:rsc:singleport.data_in(1)} {out:rsc:singleport.data_in(2)} {out:rsc:singleport.data_in(3)} {out:rsc:singleport.data_in(4)} {out:rsc:singleport.data_in(5)} {out:rsc:singleport.data_in(6)} {out:rsc:singleport.data_in(7)} -attr xrf 24766 -attr oid 175 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(0)} -port {out:rsc:singleport.data_in(0)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(1)} -port {out:rsc:singleport.data_in(1)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(2)} -port {out:rsc:singleport.data_in(2)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(3)} -port {out:rsc:singleport.data_in(3)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(4)} -port {out:rsc:singleport.data_in(4)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(5)} -port {out:rsc:singleport.data_in(5)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(6)} -port {out:rsc:singleport.data_in(6)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.data_in.reg(7)} -port {out:rsc:singleport.data_in(7)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_in}
+load net {out:rsc:singleport.addr(0)} -attr vt d
+load net {out:rsc:singleport.addr(1)} -attr vt d
+load net {out:rsc:singleport.addr(2)} -attr vt d
+load net {out:rsc:singleport.addr(3)} -attr vt d
+load net {out:rsc:singleport.addr(4)} -attr vt d
+load net {out:rsc:singleport.addr(5)} -attr vt d
+load net {out:rsc:singleport.addr(6)} -attr vt d
+load net {out:rsc:singleport.addr(7)} -attr vt d
+load net {out:rsc:singleport.addr(8)} -attr vt d
+load net {out:rsc:singleport.addr(9)} -attr vt d
+load net {out:rsc:singleport.addr(10)} -attr vt d
+load net {out:rsc:singleport.addr(11)} -attr vt d
+load net {out:rsc:singleport.addr(12)} -attr vt d
+load net {out:rsc:singleport.addr(13)} -attr vt d
+load net {out:rsc:singleport.addr(14)} -attr vt d
+load net {out:rsc:singleport.addr(15)} -attr vt d
+load net {out:rsc:singleport.addr(16)} -attr vt d
+load net {out:rsc:singleport.addr(17)} -attr vt d
+load netBundle {out:rsc:singleport.addr} 18 {out:rsc:singleport.addr(0)} {out:rsc:singleport.addr(1)} {out:rsc:singleport.addr(2)} {out:rsc:singleport.addr(3)} {out:rsc:singleport.addr(4)} {out:rsc:singleport.addr(5)} {out:rsc:singleport.addr(6)} {out:rsc:singleport.addr(7)} {out:rsc:singleport.addr(8)} {out:rsc:singleport.addr(9)} {out:rsc:singleport.addr(10)} {out:rsc:singleport.addr(11)} {out:rsc:singleport.addr(12)} {out:rsc:singleport.addr(13)} {out:rsc:singleport.addr(14)} {out:rsc:singleport.addr(15)} {out:rsc:singleport.addr(16)} {out:rsc:singleport.addr(17)} -attr xrf 24767 -attr oid 176 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(0)} -port {out:rsc:singleport.addr(0)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(1)} -port {out:rsc:singleport.addr(1)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(2)} -port {out:rsc:singleport.addr(2)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(3)} -port {out:rsc:singleport.addr(3)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(4)} -port {out:rsc:singleport.addr(4)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(5)} -port {out:rsc:singleport.addr(5)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(6)} -port {out:rsc:singleport.addr(6)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(7)} -port {out:rsc:singleport.addr(7)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(8)} -port {out:rsc:singleport.addr(8)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(9)} -port {out:rsc:singleport.addr(9)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(10)} -port {out:rsc:singleport.addr(10)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(11)} -port {out:rsc:singleport.addr(11)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(12)} -port {out:rsc:singleport.addr(12)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(13)} -port {out:rsc:singleport.addr(13)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(14)} -port {out:rsc:singleport.addr(14)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(15)} -port {out:rsc:singleport.addr(15)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(16)} -port {out:rsc:singleport.addr(16)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.addr.reg(17)} -port {out:rsc:singleport.addr(17)} -attr vt d -attr @path {/Convolotion/out:rsc:singleport.addr}
+load net {out:rsc:singleport.re} -attr xrf 24768 -attr oid 177 -attr vt d
+load net {PWR} -port {out:rsc:singleport.re} -attr xrf 24769 -attr oid 178 -attr @path {/Convolotion/out:rsc:singleport.re}
+load net {out:rsc:singleport.we} -attr xrf 24770 -attr oid 179 -attr vt d
+load net {out:rsc:singleport.we.reg} -port {out:rsc:singleport.we} -attr xrf 24771 -attr oid 180 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.we}
+load net {out:rsc:singleport.data_out(0)} -attr vt d
+load net {out:rsc:singleport.data_out(1)} -attr vt d
+load net {out:rsc:singleport.data_out(2)} -attr vt d
+load net {out:rsc:singleport.data_out(3)} -attr vt d
+load net {out:rsc:singleport.data_out(4)} -attr vt d
+load net {out:rsc:singleport.data_out(5)} -attr vt d
+load net {out:rsc:singleport.data_out(6)} -attr vt d
+load net {out:rsc:singleport.data_out(7)} -attr vt d
+load netBundle {out:rsc:singleport.data_out} 8 {out:rsc:singleport.data_out(0)} {out:rsc:singleport.data_out(1)} {out:rsc:singleport.data_out(2)} {out:rsc:singleport.data_out(3)} {out:rsc:singleport.data_out(4)} {out:rsc:singleport.data_out(5)} {out:rsc:singleport.data_out(6)} {out:rsc:singleport.data_out(7)} -attr xrf 24772 -attr oid 181 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_out}
+load net {out:rsc:singleport.data_out(0)} -port {out:rsc:singleport.data_out(0)} -attr vt d
+load net {out:rsc:singleport.data_out(1)} -port {out:rsc:singleport.data_out(1)} -attr vt d
+load net {out:rsc:singleport.data_out(2)} -port {out:rsc:singleport.data_out(2)} -attr vt d
+load net {out:rsc:singleport.data_out(3)} -port {out:rsc:singleport.data_out(3)} -attr vt d
+load net {out:rsc:singleport.data_out(4)} -port {out:rsc:singleport.data_out(4)} -attr vt d
+load net {out:rsc:singleport.data_out(5)} -port {out:rsc:singleport.data_out(5)} -attr vt d
+load net {out:rsc:singleport.data_out(6)} -port {out:rsc:singleport.data_out(6)} -attr vt d
+load net {out:rsc:singleport.data_out(7)} -port {out:rsc:singleport.data_out(7)} -attr vt d
+load netBundle out:rsc:singleport.data_out 8 out:rsc:singleport.data_out(0) out:rsc:singleport.data_out(1) out:rsc:singleport.data_out(2) out:rsc:singleport.data_out(3) out:rsc:singleport.data_out(4) out:rsc:singleport.data_out(5) out:rsc:singleport.data_out(6) out:rsc:singleport.data_out(7) -attr xrf 24773 -attr oid 182 -attr vt d -attr @path {/Convolotion/out:rsc:singleport.data_out}
+load inst "Convolotion:core:inst" "Convolotion:core" "orig" -attr xrf 24774 -attr oid 183 -attr vt dc -attr @path {/Convolotion/Convolotion:core:inst} -attr area 505.864667 -attr delay 6.033274 -attr hier "/Convolotion/Convolotion:core" -pg 1 -lvl 5
+load net {clk} -pin  "Convolotion:core:inst" {clk#1} -attr xrf 24775 -attr oid 184 -attr @path {/Convolotion/clk}
+load net {rst} -pin  "Convolotion:core:inst" {rst#1} -attr xrf 24776 -attr oid 185 -attr @path {/Convolotion/rst}
+load net {in:rsc:singleport.addr.reg(0)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(0)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(1)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(1)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(2)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(2)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(3)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(3)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(4)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(4)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(5)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(5)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(6)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(6)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(7)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(7)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(8)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(8)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(9)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(9)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(10)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(10)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(11)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(11)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(12)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(12)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(13)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(13)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(14)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(14)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(15)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(15)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(16)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(16)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.addr.reg(17)} -pin  "Convolotion:core:inst" {in:rsc:singleport.addr#1(17)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.addr.reg}
+load net {in:rsc:singleport.re.reg} -pin  "Convolotion:core:inst" {in:rsc:singleport.re#1} -attr xrf 24777 -attr oid 186 -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.re.reg}
+load net {in:rsc:singleport.data_out(0)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(0)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(1)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(1)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(2)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(2)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(3)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(3)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(4)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(4)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(5)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(5)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(6)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(6)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {in:rsc:singleport.data_out(7)} -pin  "Convolotion:core:inst" {in:rsc:singleport.data_out#1(7)} -attr vt dc -attr @path {/Convolotion/in:rsc:singleport.data_out}
+load net {out:rsc:singleport.data_in.reg(0)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(0)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(1)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(1)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(2)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(2)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(3)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(3)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(4)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(4)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(5)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(5)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(6)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(6)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.data_in.reg(7)} -pin  "Convolotion:core:inst" {out:rsc:singleport.data_in#1(7)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.data_in.reg}
+load net {out:rsc:singleport.addr.reg(0)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(0)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(1)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(1)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(2)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(2)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(3)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(3)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(4)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(4)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(5)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(5)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(6)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(6)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(7)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(7)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(8)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(8)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(9)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(9)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(10)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(10)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(11)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(11)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(12)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(12)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(13)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(13)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(14)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(14)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(15)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(15)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(16)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(16)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.addr.reg(17)} -pin  "Convolotion:core:inst" {out:rsc:singleport.addr#1(17)} -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.addr.reg}
+load net {out:rsc:singleport.we.reg} -pin  "Convolotion:core:inst" {out:rsc:singleport.we#1} -attr xrf 24778 -attr oid 187 -attr vt dc -attr @path {/Convolotion/out:rsc:singleport.we.reg}
+### END MODULE 
+

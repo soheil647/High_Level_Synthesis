@@ -1,0 +1,15 @@
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:for:acc#6 RESOURCE_NAME for:for-1:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,3)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:acc#1 RESOURCE_NAME for:for-1:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(2,0,2,0,3)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:for:acc#7 RESOURCE_NAME for:for-1:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(3,0,3,0,4)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:acc#2 RESOURCE_NAME for:for-1:for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(3,0,3,0,4)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-3:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-2:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:for:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-2:for:for:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-3:for:for:acc#3 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:for:acc#1 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)#1
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:acc#1 RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)#1
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-1:for:for:else:acc RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)#2
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-2:for:for:else:acc RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)#2
+directive set /Convolotion/Convolotion:core/Convolotion:core:conc/for:for-3:for:for:else:acc RESOURCE_NAME for:mgc_Altera-Cyclone-II-6_beh_psr.mgc_add(9,0,3,1,11)#2

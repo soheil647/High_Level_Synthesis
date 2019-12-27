@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ss\Desktop\CA2
+vConvolotion
+Z1 !s100 @P?O8Wam`Cn@k<k>;zJO03
+Z2 IIj8zgnz9N5H>go[DDo4^l1
+Z3 VQKe9gOzjHH8JVCA0S@Sa:1
+Z4 dC:\Users\ss\Desktop\ESL_modelsim
+Z5 w1555692254
+Z6 8C:/Users/ss/Desktop/ESL_modelsim/Convolv.v
+Z7 FC:/Users/ss/Desktop/ESL_modelsim/Convolv.v
+Z8 L0 588
+Z9 OV;L;10.1d;51
+r1
+31
+Z10 !s108 1555764640.799000
+Z11 !s107 C:/Users/ss/Desktop/ESL_modelsim/Convolv.v|
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/ESL_modelsim/Convolv.v|
+Z13 o-work work -O0
+Z14 n@convolotion
+!i10b 1
+!s85 0
+!s101 -O0
+vConvolotion_core
+Z15 !s100 X]o_JdGgFOnP?WJja2TjU2
+Z16 I8iII3=:G<:2ol_YZYAQgg0
+Z17 V:[nOo@JF7d_TEKGX0GPL[1
+R4
+R5
+R6
+R7
+Z18 L0 117
+R9
+r1
+31
+R10
+R11
+R12
+R13
+Z19 n@convolotion_core
+!i10b 1
+!s85 0
+!s101 -O0
+vConvolotion_core_fsm
+Z20 !s100 iBm7@ATYib^NZMI^kIT>d0
+Z21 IIAkA7T^>OlRAG3g5^Nb4J1
+Z22 V2^TAcZXjEolXcM[V[nW`I3
+R4
+R5
+R6
+R7
+L0 19
+R9
+r1
+31
+R10
+R11
+R12
+R13
+Z23 n@convolotion_core_fsm
+!i10b 1
+!s85 0
+!s101 -O0
+vESL_quartes
+Z24 IOo`AT87Z=fYY6`NCAzziA0
+Z25 V:=84S;2oRJ;mG5W@Rh7M13
+R4
+Z26 w1555681720
+R6
+R7
+R8
+R9
+r1
+31
+Z27 !s108 1555681812.984000
+R11
+R12
+R13
+Z28 n@e@s@l_quartes
+Z29 !s100 5h5HgUa]O64A@Rb]Ca>1A2
+!i10b 1
+!s85 0
+!s101 -O0
+vRam
+Z30 IDY321hfHY_R@:<TN]RCZ`0
+Z31 VE:M@1>NknRPjE3C<EWGSY0
+R4
+Z32 w1555764642
+Z33 8C:/Users/ss/Desktop/ESL_modelsim/Ram.v
+Z34 FC:/Users/ss/Desktop/ESL_modelsim/Ram.v
+L0 2
+R9
+r1
+31
+Z35 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/ESL_modelsim/Ram.v|
+R13
+n@ram
+Z36 !s100 ]BIYob=OMbhmjFMC]:RoX1
+Z37 !s108 1555764642.209000
+Z38 !s107 C:/Users/ss/Desktop/ESL_modelsim/Ram.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRom
+Z39 !s100 I922:1X2;[JH`c?02jR=O1
+Z40 IET[fDRNd[Y@_]k^]gdE043
+Z41 V8HMB@S8V5N:dmHDKnZYEh3
+R4
+Z42 w1555686770
+Z43 8C:/Users/ss/Desktop/ESL_modelsim/Rom.v
+Z44 FC:/Users/ss/Desktop/ESL_modelsim/Rom.v
+L0 2
+R9
+r1
+31
+Z45 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/ESL_modelsim/Rom.v|
+R13
+n@rom
+Z46 !s108 1555764641.019000
+Z47 !s107 C:/Users/ss/Desktop/ESL_modelsim/Rom.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vTest
+Z48 !s100 j0o=B:39zWVBdWf46;eA[2
+Z49 IBUga>;mU7TFmd`b`LRTm33
+Z50 VU7RCK<DV^KITSa1^IXRKH1
+R4
+Z51 w1555763019
+Z52 8C:/Users/ss/Desktop/ESL_modelsim/Test.v
+Z53 FC:/Users/ss/Desktop/ESL_modelsim/Test.v
+L0 3
+R9
+r1
+31
+Z54 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/ESL_modelsim/Test.v|
+R13
+Z55 n@test
+!i10b 1
+!s85 0
+Z56 !s108 1555764642.349000
+Z57 !s107 C:/Users/ss/Desktop/ESL_modelsim/Test.v|
+!s101 -O0
+vTop_File
+!i10b 1
+Z58 !s100 =8LAo:4HaJUi<X`XBKiQl2
+Z59 Id6ImD:gcf2];_DhMFPB^T1
+Z60 VH7f4k^J:;kjI_G4^TdNbI1
+R4
+Z61 w1555692687
+Z62 8C:/Users/ss/Desktop/ESL_modelsim/Top_File.v
+Z63 FC:/Users/ss/Desktop/ESL_modelsim/Top_File.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1555764642.509000
+!s107 C:/Users/ss/Desktop/ESL_modelsim/Top_File.v|
+Z64 !s90 -reportprogress|300|-work|work|C:/Users/ss/Desktop/ESL_modelsim/Top_File.v|
+!s101 -O0
+R13
+Z65 n@top_@file

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CA5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Stack|altsyncram:stack_mem_rtl_0" CBX_FILE_NAME="altsyncram_agc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
